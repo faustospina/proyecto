@@ -29,7 +29,7 @@
 		<td><?php echo h($audiencia['Audiencia']['detenido']); ?>&nbsp;</td>
 		<td><?php echo h($audiencia['Audiencia']['descripcion']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('Ver Informacion detallada'), array('action' => 'view', $audiencia['Audiencia']['id']),array('class' => 'btn btn-xs btn-info')); ?>
+			<?php echo $this->Html->link(__('Ver información detallada'), array('action' => 'view', $audiencia['Audiencia']['id']),array('class' => 'btn btn-xs btn-info')); ?>
 			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $audiencia['Audiencia']['id']),array('class' => 'btn btn-xs btn-warning')); ?>
 			<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $audiencia['Audiencia']['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $audiencia['Audiencia']['id'])); ?>
 		</td>

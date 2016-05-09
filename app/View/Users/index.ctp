@@ -20,8 +20,8 @@
 			<th><?php echo $this->Paginator->sort('correo'); ?></th>
 			<th><?php echo $this->Paginator->sort('usuario'); ?></th>
 
-			<th><?php echo $this->Paginator->sort('Creado'); ?></th>
-			<th><?php echo $this->Paginator->sort('Modificado'); ?></th>
+			<th><?php echo $this->Paginator->sort('Fecha Creado'); ?></th>
+			<th><?php echo $this->Paginator->sort('Fecha Modificado'); ?></th>
 			<th><?php echo $this->Paginator->sort('TituloProfesional'); ?></th>
 			<th><?php echo $this->Paginator->sort('Rol'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
@@ -42,7 +42,7 @@
 		<td><?php echo h($user['User']['tituloProfesional']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['roll']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('Ver Informacion detallada'), array('action' => 'view', $user['User']['id']),array('class' => 'btn btn-xs btn-info')); ?>
+			<?php echo $this->Html->link(__('Ver información detallada'), array('action' => 'view', $user['User']['id']),array('class' => 'btn btn-xs btn-info')); ?>
 			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $user['User']['id']),array('class' => 'btn btn-xs btn-warning')); ?>
 			<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $user['User']['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $user['User']['id'])); ?>
 		</td>

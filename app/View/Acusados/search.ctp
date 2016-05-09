@@ -1,6 +1,6 @@
 <?php if($ajax != 1): ?>
 
-    <h1>Buscar acusado</h1>
+    <h1>Buscar Acusado</h1>
     <br>
     <div class="row">
         <?php echo $this->Form->create('Acusado', array('type' => 'GET')); ?>
