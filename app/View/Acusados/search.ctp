@@ -1,6 +1,6 @@
 <?php if($ajax != 1): ?>
 
-    <h1>Buscar platillo</h1>
+    <h1>Buscar acusado</h1>
     <br>
     <div class="row">
         <?php echo $this->Form->create('Acusado', array('type' => 'GET')); ?>
@@ -44,7 +44,7 @@
     
     <?php else: ?>
     
-    <h3>No se encontró el platillo que busca :-( </h3>
+    <h3>No se encontró el acusado que busca :-( </h3>
     
     <?php endif; ?>
 

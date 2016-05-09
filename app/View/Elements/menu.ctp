@@ -14,7 +14,9 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><?php echo $this->Html->link('HOME', array('controller' => 'pages', 'action' => 'display', 'home'))  ?></li>
+      <?php if($current_user['roll'] == 'user'): ?>
              <li class="active"><?php echo $this->Html->link('calendario', array('controller' => 'events', 'action' => 'calendario'))  ?></li>
+      <?php endif; ?>
       <?php if($current_user['roll'] == 'admin'): ?>
       <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Usuarios <span class="caret"></span></a>
@@ -28,14 +30,13 @@
        <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Agregar involucrados<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><?php echo $this->Html->link('Agregar juez', array('controller'=>'juezs','action'=>'add'))  ?> </li>
-                <li><?php echo $this->Html->link('Agregar fiscal', array('controller'=>'fiscals','action'=>'add'))  ?> </li>
-                <li><?php echo $this->Html->link('Agregar ciudades', array('controller'=>'ciudads','action'=>'add'))  ?> </li>
-                <li><?php echo $this->Html->link('Agregar carceles', array('controller'=>'carcels','action'=>'add'))  ?> </li>
-                <li><?php echo $this->Html->link('Agregar Audiencia', array('controller'=>'audiencias','action'=>'add'))  ?> </li>
-                <li><?php echo $this->Html->link('Agregar acusados', array('controller'=>'acusados','action'=>'add'))  ?> </li>
-              <li><?php echo $this->Html->link('agregar proceso penal', array('controller'=>'procesos','action'=>'add'))  ?> </li>
-            
+                  <li><?php echo $this->Html->link('Agregar ciudades', array('controller'=>'ciudads','action'=>'add'))  ?> </li>
+                  <li><?php echo $this->Html->link('Agregar Audiencia', array('controller'=>'audiencias','action'=>'add'))  ?> </li>
+                  <li><?php echo $this->Html->link('Agregar juez', array('controller'=>'juezs','action'=>'add'))  ?> </li>
+                  <li><?php echo $this->Html->link('Agregar fiscal', array('controller'=>'fiscals','action'=>'add'))  ?> </li>
+                  <li><?php echo $this->Html->link('Agregar acusados', array('controller'=>'acusados','action'=>'add'))  ?> </li>
+                  <li><?php echo $this->Html->link('agregar proceso penal', array('controller'=>'procesos','action'=>'add'))  ?> </li>
+                  <li><?php echo $this->Html->link('Agregar carceles', array('controller'=>'carcels','action'=>'add'))  ?> </li>
               </ul>
       </li>
       <li class="dropdown">

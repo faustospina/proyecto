@@ -1,7 +1,7 @@
 <div class="events form">
 
 	<fieldset>
-		<legend><?php echo __('calendario'); ?></legend>
+		<legend><?php echo __('Calendario'); ?></legend>
 
 	</fieldset>
 

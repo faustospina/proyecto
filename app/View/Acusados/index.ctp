@@ -46,7 +46,7 @@
 	
 		<td class="actions">
 			<?php echo $this->Html->link(__('Ver Informacion detallada'), array('action' => 'view', $acusado['Acusado']['id']),array('class' => 'btn btn-xs btn-info')); ?>
-			<?php echo $this->Html->link(__('Editar acusado'), array('action' => 'edit', $acusado['Acusado']['id']),array('class' => 'btn btn-xs btn-warning')); ?>
+			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $acusado['Acusado']['id']),array('class' => 'btn btn-xs btn-warning')); ?>
 			<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $acusado['Acusado']['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $acusado['Acusado']['id'])); ?>
 		</td>
 	</tr>

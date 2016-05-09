@@ -28,9 +28,9 @@
 			<?php echo $this->Html->link($fiscal['Audiencia']['nombre'], array('controller' => 'audiencias', 'action' => 'view', $fiscal['Audiencia']['id'])); ?>
 		</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $fiscal['Fiscal']['id']),array('class' => 'btn btn-xs btn-info')); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $fiscal['Fiscal']['id']),array('class' => 'btn btn-xs btn-warning')); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $fiscal['Fiscal']['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $fiscal['Fiscal']['id'])); ?>
+			<?php echo $this->Html->link(__('Ver Informacion detallada'), array('action' => 'view', $fiscal['Fiscal']['id']),array('class' => 'btn btn-xs btn-info')); ?>
+			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $fiscal['Fiscal']['id']),array('class' => 'btn btn-xs btn-warning')); ?>
+			<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $fiscal['Fiscal']['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $fiscal['Fiscal']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

@@ -28,7 +28,7 @@ public function beforeFilter()
 	{
 		parent::beforeFilter();
 		
-		$this->Auth->allow('add','view','edit','index');
+	//	$this->Auth->allow('add','view','edit','index');
 		
 	}
 public function login()
@@ -87,7 +87,7 @@ public function logout()
 		if ($this->request->is('post')) {
 			$this->User->create();
 			//configurar el roll al agregar
-			$this->request->data['User']['roll'] = 'admin';
+			$this->request->data['User']['roll'] = 'user';
 			if ($this->User->save($this->request->data)) {
 				$this->Session->setFlash('se ha agregado el susuario satisfactoriamente', 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));

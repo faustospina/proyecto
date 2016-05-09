@@ -4,7 +4,7 @@
 <br />	
 <br />
 <div class="page-header">
-<h2><?php echo __('User'); ?></h2>
+<h2><?php echo __('Usuario'); ?></h2>
 </div>
 
 <div class="col-md-12">
@@ -17,12 +17,12 @@
 		<th><?php echo __('Apellidos'); ?></th>
 		<th><?php echo __('Celular'); ?></th>
 		<th><?php echo __('Correo'); ?></th>
-		<th><?php echo __('Username'); ?></th>
+		<th><?php echo __('Usuario'); ?></th>
 	
-		<th><?php echo __('Created'); ?></th>
-		<th><?php echo __('Modified'); ?></th>
+		<th><?php echo __('Creado'); ?></th>
+		<th><?php echo __('Modificado'); ?></th>
 		<th><?php echo __('TituloProfesional'); ?></th>
-		<th><?php echo __('Roll'); ?></th>
+		<th><?php echo __('Rol'); ?></th>
 	</tr>
 	</thead>
 	<tbody>
@@ -44,13 +44,13 @@
 	</div>
 
 <div class="related">
-	<h3><?php echo __('Related Acusados'); ?></h3>
+	<h3><?php echo __('Acusados Relacionados'); ?></h3>
 	<?php if (!empty($user['Acusado'])): ?>
 	<div class="col-md-12">
 	<table class="table table-striped">
 	<tr>
 		<th><?php echo __('Id'); ?></th>
-		<th><?php echo __('Created'); ?></th>
+		<th><?php echo __('Creado'); ?></th>
 		<th><?php echo __('Nombre'); ?></th>
 		<th><?php echo __('Apellidos'); ?></th>
 		<th><?php echo __('Direccion'); ?></th>

@@ -6,7 +6,7 @@
 
 	
 	<div class="page-header">
-	<h2><?php echo __('Users'); ?></h2>
+	<h2><?php echo __('Usuarios'); ?></h2>
 	</div>
 
 	<div class="col-md-12">
@@ -18,12 +18,12 @@
 			<th><?php echo $this->Paginator->sort('apellidos'); ?></th>
 			<th><?php echo $this->Paginator->sort('celular'); ?></th>
 			<th><?php echo $this->Paginator->sort('correo'); ?></th>
-			<th><?php echo $this->Paginator->sort('username'); ?></th>
+			<th><?php echo $this->Paginator->sort('usuario'); ?></th>
 
-			<th><?php echo $this->Paginator->sort('created'); ?></th>
-			<th><?php echo $this->Paginator->sort('modified'); ?></th>
-			<th><?php echo $this->Paginator->sort('tituloProfesional'); ?></th>
-			<th><?php echo $this->Paginator->sort('roll'); ?></th>
+			<th><?php echo $this->Paginator->sort('Creado'); ?></th>
+			<th><?php echo $this->Paginator->sort('Modificado'); ?></th>
+			<th><?php echo $this->Paginator->sort('TituloProfesional'); ?></th>
+			<th><?php echo $this->Paginator->sort('Rol'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>
@@ -42,9 +42,9 @@
 		<td><?php echo h($user['User']['tituloProfesional']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['roll']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $user['User']['id']),array('class' => 'btn btn-xs btn-info')); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $user['User']['id']),array('class' => 'btn btn-xs btn-warning')); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $user['User']['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $user['User']['id'])); ?>
+			<?php echo $this->Html->link(__('Ver Informacion detallada'), array('action' => 'view', $user['User']['id']),array('class' => 'btn btn-xs btn-info')); ?>
+			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $user['User']['id']),array('class' => 'btn btn-xs btn-warning')); ?>
+			<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $user['User']['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $user['User']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

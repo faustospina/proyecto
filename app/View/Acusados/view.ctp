@@ -78,9 +78,9 @@
 			<td><?php echo $proceso['estado']; ?></td>
 			<td><?php echo $this->Html->link($acusado['Acusado']['nombre'], array('controller' => 'acusados', 'action' => 'view', $acusado['User']['id'])); ?></td>
 			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'procesos', 'action' => 'view', $proceso['id']),array('class' => 'btn btn-xs btn-info')); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'procesos', 'action' => 'edit', $proceso['id']),array('class' => 'btn btn-xs btn-warning')); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'procesos', 'action' => 'delete', $proceso['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $proceso['id'])); ?>
+				<?php echo $this->Html->link(__('Ver Informacion detallada'), array('controller' => 'procesos', 'action' => 'view', $proceso['id']),array('class' => 'btn btn-xs btn-info')); ?>
+				<?php echo $this->Html->link(__('Editar'), array('controller' => 'procesos', 'action' => 'edit', $proceso['id']),array('class' => 'btn btn-xs btn-warning')); ?>
+				<?php echo $this->Form->postLink(__('Eliminar'), array('controller' => 'procesos', 'action' => 'delete', $proceso['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $proceso['id'])); ?>
 			</td>
 		</tr>
 	<?php endforeach; ?>
