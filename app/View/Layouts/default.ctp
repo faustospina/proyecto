@@ -40,7 +40,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php echo $this->Html->css(array('fullCalendar/fullCalendar.print'), 'stylesheet', array('media' => 'print'));?>
 	<?php echo $this->Html->script('fullCalendar/moment.min');  ?>
 	<?php echo $this->Html->script('fullCalendar/fullcalendar.min');  ?>
-
     <?php echo $this->Html->css('fullCalendar/cssCalendario');?>
     <?php echo $this->Html->script('fullCalendar/jsCalendario');  ?>
 	
@@ -48,7 +47,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	
 	<script type="text/javascript">
 		$("#foto").fileinput();
-	$("#foto").fileinput();
+	    $("#foto").fileinput();
 		var path = "<?php echo  Configure::read('sw.path'); ?>";
 		var basePath = "<?php echo Router::url('/'); ?>"
 	</script>
