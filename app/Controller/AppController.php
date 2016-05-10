@@ -23,7 +23,7 @@ App::uses('Controller', 'Controller');
 Configure::write(
     'sw',
     array(
-       /*'path' => '/consultorio/'*/
+  
         'path' => '/'
     )
 );

@@ -24,18 +24,18 @@
 <div class="actions">
 <div class="btn-group">
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-	<?php echo __('Actions'); ?><span class="caret"></span>
+	<?php echo __('opciones'); ?><span class="caret"></span>
 		 </button>
 	<ul class="dropdown-menu" role="menu">
 
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Proceso.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('Proceso.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Procesos'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Acusados'), array('controller' => 'acusados', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Acusado'), array('controller' => 'acusados', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Fiscals'), array('controller' => 'fiscals', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Fiscal'), array('controller' => 'fiscals', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Juezs'), array('controller' => 'juezs', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Juez'), array('controller' => 'juezs', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $this->Form->value('Proceso.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('Proceso.id'))); ?></li>
+		<li><?php echo $this->Html->link(__('Lista de Procesos'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('Lista de Acusados'), array('controller' => 'acusados', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo Acusado'), array('controller' => 'acusados', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de Fiscales'), array('controller' => 'fiscals', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo Fiscal'), array('controller' => 'fiscals', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de Juezes'), array('controller' => 'juezs', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo Juez'), array('controller' => 'juezs', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
 </div>

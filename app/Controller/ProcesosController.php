@@ -33,9 +33,7 @@ class ProcesosController extends AppController {
 		$this->Proceso->recursive = 0;
 
 		$this->paginate['Proceso']['limit'] = 3;
-		//$this->paginate['Mesero']['conditions'] = array('Mesero.dni' => "34343");
 		$this->paginate['Proceso']['order'] = array('Proceso.id' => 'asc');
- 		//$this->Paginator->settings = $this->paginate;
 		$this->set('procesos', $this->paginate());
 	}
 /**

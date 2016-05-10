@@ -59,9 +59,9 @@
 			<td><?php echo $proceso['estado']; ?></td>
 			<td><?php echo $proceso['acusado_id']; ?></td>
 			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'procesos', 'action' => 'view', $proceso['id']),array('class' => 'btn btn-xs btn-info')); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'procesos', 'action' => 'edit', $proceso['id']),array('class' => 'btn btn-xs btn-warning')); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'procesos', 'action' => 'delete', $proceso['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $proceso['id'])); ?>
+				<?php echo $this->Html->link(__('Ver detalle'), array('controller' => 'procesos', 'action' => 'view', $proceso['id']),array('class' => 'btn btn-xs btn-info')); ?>
+				<?php echo $this->Html->link(__('Editar'), array('controller' => 'procesos', 'action' => 'edit', $proceso['id']),array('class' => 'btn btn-xs btn-warning')); ?>
+				<?php echo $this->Form->postLink(__('Eliminar'), array('controller' => 'procesos', 'action' => 'delete', $proceso['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $proceso['id'])); ?>
 			</td>
 		</tr>
 	<?php endforeach; ?>
@@ -73,7 +73,7 @@
 <div class="col-md-2">
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('New Proceso'), array('controller' => 'procesos', 'action' => 'add'),array('class' => 'btn btn-info')); ?> </li>
+			<li><?php echo $this->Html->link(__('Nuevo Proceso'), array('controller' => 'procesos', 'action' => 'add'),array('class' => 'btn btn-info')); ?> </li>
 		</ul>
 	</div>
 
@@ -81,17 +81,17 @@
 <div class="actions">
 <div class="btn-group">
   <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
-	<?php echo __('Actions'); ?><span class="caret"></span>
+	<?php echo __('Opciones'); ?><span class="caret"></span>
 	</button>
 	<ul class="dropdown-menu" role="menu">
-		<li><?php echo $this->Html->link(__('Edit Juez'), array('action' => 'edit', $juez['Juez']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Juez'), array('action' => 'delete', $juez['Juez']['id']), array(), __('Are you sure you want to delete # %s?', $juez['Juez']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Juezs'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Juez'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Audiencias'), array('controller' => 'audiencias', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Audiencia'), array('controller' => 'audiencias', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Procesos'), array('controller' => 'procesos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Proceso'), array('controller' => 'procesos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Editar Juez'), array('action' => 'edit', $juez['Juez']['id'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Eliminar Juez'), array('action' => 'delete', $juez['Juez']['id']), array(), __('Are you sure you want to delete # %s?', $juez['Juez']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de Juezes'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo Juez'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de Audiencias'), array('controller' => 'audiencias', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nueva Audiencia'), array('controller' => 'audiencias', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de Procesos'), array('controller' => 'procesos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo Proceso'), array('controller' => 'procesos', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
 </div>

@@ -9,8 +9,8 @@
 	<table class="table table-striped">
 	<thead>
 	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('created'); ?></th>
+			
+			<th><?php echo $this->Paginator->sort('fecha de cracion'); ?></th>
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
 			<th><?php echo $this->Paginator->sort('numeroPatios'); ?></th>
 			<th><?php echo $this->Paginator->sort('numeroCelda'); ?></th>
@@ -18,13 +18,13 @@
 			<th><?php echo $this->Paginator->sort('fechaVisita'); ?></th>
 			<th><?php echo $this->Paginator->sort('ciudad_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('audiencia_id'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th class="actions"><?php echo __('Opciones'); ?></th>
 	</tr>
 	</thead>
 	<tbody>
 	<?php foreach ($carcels as $carcel): ?>
 	<tr>
-		<td><?php echo h($carcel['Carcel']['id']); ?>&nbsp;</td>
+		
 		<td><?php echo h($carcel['Carcel']['created']); ?>&nbsp;</td>
 		<td><?php echo h($carcel['Carcel']['nombre']); ?>&nbsp;</td>
 		<td><?php echo h($carcel['Carcel']['numeroPatios']); ?>&nbsp;</td>

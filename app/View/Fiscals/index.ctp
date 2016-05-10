@@ -9,18 +9,18 @@
 	<table class="table table-striped">
 	<thead>
 	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
+		
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
 			<th><?php echo $this->Paginator->sort('apellidos'); ?></th>
 			<th><?php echo $this->Paginator->sort('codigoRepresentativo'); ?></th>
 			<th><?php echo $this->Paginator->sort('audiencia_id'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th class="actions"><?php echo __('Opciones'); ?></th>
 	</tr>
 	</thead>
 	<tbody>
 	<?php foreach ($fiscals as $fiscal): ?>
 	<tr>
-		<td><?php echo h($fiscal['Fiscal']['id']); ?>&nbsp;</td>
+	
 		<td><?php echo h($fiscal['Fiscal']['nombre']); ?>&nbsp;</td>
 		<td><?php echo h($fiscal['Fiscal']['apellidos']); ?>&nbsp;</td>
 		<td><?php echo h($fiscal['Fiscal']['codigoRepresentativo']); ?>&nbsp;</td>
@@ -28,7 +28,7 @@
 			<?php echo $this->Html->link($fiscal['Audiencia']['nombre'], array('controller' => 'audiencias', 'action' => 'view', $fiscal['Audiencia']['id'])); ?>
 		</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('Ver Informacion detallada'), array('action' => 'view', $fiscal['Fiscal']['id']),array('class' => 'btn btn-xs btn-info')); ?>
+			<?php echo $this->Html->link(__('Ver Información detallada'), array('action' => 'view', $fiscal['Fiscal']['id']),array('class' => 'btn btn-xs btn-info')); ?>
 			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $fiscal['Fiscal']['id']),array('class' => 'btn btn-xs btn-warning')); ?>
 			<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $fiscal['Fiscal']['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $fiscal['Fiscal']['id'])); ?>
 		</td>

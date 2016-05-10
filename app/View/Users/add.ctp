@@ -1,6 +1,4 @@
-<br />
-<br />
-<br />
+
 <br />	
 <br />
 <div class="container">
@@ -24,20 +22,8 @@
 <?php echo $this->Form->end(array('label' => 'Agregar', 'class' =>'btn btn-success')); ?>
 </p>
 </div>
+</div>
+</div>
 
-<div class="actions">
-<div class="btn-group">
-  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
-<div class="actions">
-	<?php echo __('Actions'); ?><span class="caret"></span>
-	</button>
-	<ul class="dropdown-menu" role="menu">
 
-		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Acusados'), array('controller' => 'acusados', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Acusado'), array('controller' => 'acusados', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
-</div>
-</div>
-</div>
+

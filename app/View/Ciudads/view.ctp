@@ -24,17 +24,17 @@
 <div class="actions">
 <div class="btn-group">
   <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
-	<?php echo __('Actions'); ?><span class="caret"></span>
+	<?php echo __('Opciones'); ?><span class="caret"></span>
 		</button>
 	<ul class="dropdown-menu" role="menu">
-		<li><?php echo $this->Html->link(__('Edit Ciudad'), array('action' => 'edit', $ciudad['Ciudad']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Ciudad'), array('action' => 'delete', $ciudad['Ciudad']['id']), array(), __('Are you sure you want to delete # %s?', $ciudad['Ciudad']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Ciudads'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Ciudad'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Acusados'), array('controller' => 'acusados', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Acusado'), array('controller' => 'acusados', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Carcels'), array('controller' => 'carcels', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Carcel'), array('controller' => 'carcels', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Editar Ciudad'), array('action' => 'edit', $ciudad['Ciudad']['id'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Eliminar Ciudad'), array('action' => 'delete', $ciudad['Ciudad']['id']), array(), __('Are you sure you want to delete # %s?', $ciudad['Ciudad']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de Ciudades'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nueva Ciudad'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de Acusados'), array('controller' => 'acusados', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo Acusado'), array('controller' => 'acusados', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de Carceles'), array('controller' => 'carcels', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nueva Carcel'), array('controller' => 'carcels', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
 </div>
@@ -47,15 +47,15 @@
 		<div class="col-md-12">
 	<table class="table table-striped">
 	<tr>
-		<th><?php echo __('Id'); ?></th>
-		<th><?php echo __('Created'); ?></th>
+		
+		<th><?php echo __('fecha de cracion'); ?></th>
 		<th><?php echo __('Nombre'); ?></th>
 		<th><?php echo __('Apellidos'); ?></th>
 		<th><?php echo __('Direccion'); ?></th>
 		<th><?php echo __('Ocupacion'); ?></th>
 		<th><?php echo __('Culpabilidad'); ?></th>
 		<th><?php echo __('CapacidadPago'); ?></th>
-		<th><?php echo __('Modified'); ?></th>
+		<th><?php echo __('fecha de modificacion'); ?></th>
 		<th><?php echo __('Sentencia'); ?></th>
 		<th><?php echo __('User Id'); ?></th>
 		<th><?php echo __('Ciudad Id'); ?></th>
@@ -64,7 +64,7 @@
 	</tr>
 	<?php foreach ($ciudad['Acusado'] as $acusado): ?>
 		<tr>
-			<td><?php echo $acusado['id']; ?></td>
+		
 			<td><?php echo $acusado['created']; ?></td>
 			<td><?php echo $acusado['nombre']; ?></td>
 			<td><?php echo $acusado['apellidos']; ?></td>
@@ -100,12 +100,11 @@
 		<div class="col-md-12">
 	<table class="table table-striped">
 	<tr>
-		<th><?php echo __('Id'); ?></th>
-		<th><?php echo __('Created'); ?></th>
+		<th><?php echo __('fecha de creacion'); ?></th>
 		<th><?php echo __('Nombre'); ?></th>
 		<th><?php echo __('NumeroPatios'); ?></th>
 		<th><?php echo __('NumeroCelda'); ?></th>
-		<th><?php echo __('Modified'); ?></th>
+		<th><?php echo __('fecha de modificacion'); ?></th>
 		<th><?php echo __('FechaVisita'); ?></th>
 		<th><?php echo __('Ciudad Id'); ?></th>
 		<th><?php echo __('Audiencia Id'); ?></th>
@@ -113,7 +112,7 @@
 	</tr>
 	<?php foreach ($ciudad['Carcel'] as $carcel): ?>
 		<tr>
-			<td><?php echo $carcel['id']; ?></td>
+			
 			<td><?php echo $carcel['created']; ?></td>
 			<td><?php echo $carcel['nombre']; ?></td>
 			<td><?php echo $carcel['numeroPatios']; ?></td>

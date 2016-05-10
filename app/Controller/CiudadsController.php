@@ -33,9 +33,7 @@ class CiudadsController extends AppController {
 		$this->Ciudad->recursive = 0;
 
 		$this->paginate['Ciudad']['limit'] = 3;
-		//$this->paginate['Mesero']['conditions'] = array('Mesero.dni' => "34343");
 		$this->paginate['Ciudad']['order'] = array('Ciudad.id' => 'asc');
- 		//$this->Paginator->settings = $this->paginate;
 		$this->set('ciudads', $this->paginate());
 	}
 /**

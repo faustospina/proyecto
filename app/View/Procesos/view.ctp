@@ -6,37 +6,37 @@
 <div class="col-md-12">
 
 	<table class="table table-striped">
-	<thead>
-	<tr>
-	<th><?php echo __('Id'); ?></th>
-	<th><?php echo __('NombreDelito'); ?></th>
-	<th><?php echo __('NombreVariacionDelito'); ?></th>
-	<th><?php echo __('Descripcion'); ?></th>
-	<th><?php echo __('NumeroRadicado'); ?></th>
-	<th><?php echo __('NumeroProceso'); ?></th>
-	<th><?php echo __('Estado'); ?></th>
-	<th><?php echo __('Acusado'); ?></th>
-	</tr>
+	 <thead>
+		<tr>
+			<th><?php echo __('Id'); ?></th>
+			<th><?php echo __('NombreDelito'); ?></th>
+			<th><?php echo __('NombreVariacionDelito'); ?></th>
+			<th><?php echo __('Descripcion'); ?></th>
+			<th><?php echo __('NumeroRadicado'); ?></th>
+			<th><?php echo __('NumeroProceso'); ?></th>
+			<th><?php echo __('Estado'); ?></th>
+			<th><?php echo __('Acusado'); ?></th>
+		</tr>
 	</thead>
 	<tbody>
-	<tr>
-	<td><?php echo h($proceso['Proceso']['id']); ?></td>
-	<td><?php echo h($proceso['Proceso']['nombreDelito']); ?></td>
-	<td><?php echo h($proceso['Proceso']['nombreVariacionDelito']); ?></td>
-	<td><?php echo h($proceso['Proceso']['descripcion']); ?></td>
-	<td><?php echo h($proceso['Proceso']['numeroRadicado']); ?></td>
-	<td><?php echo h($proceso['Proceso']['numeroProceso']); ?></td>
-	<td><?php echo h($proceso['Proceso']['estado']); ?></td>
-	<td>	<?php echo $this->Html->link($proceso['Acusado']['nombre'], array('controller' => 'acusados', 'action' => 'view', $proceso['Acusado']['id'])); ?></td>
-	</tr>
+		<tr>
+			<td><?php echo h($proceso['Proceso']['id']); ?></td>
+			<td><?php echo h($proceso['Proceso']['nombreDelito']); ?></td>
+			<td><?php echo h($proceso['Proceso']['nombreVariacionDelito']); ?></td>
+			<td><?php echo h($proceso['Proceso']['descripcion']); ?></td>
+			<td><?php echo h($proceso['Proceso']['numeroRadicado']); ?></td>
+			<td><?php echo h($proceso['Proceso']['numeroProceso']); ?></td>
+			<td><?php echo h($proceso['Proceso']['estado']); ?></td>
+			<td>	<?php echo $this->Html->link($proceso['Acusado']['nombre'], array('controller' => 'acusados', 'action' => 'view', $proceso['Acusado']['id'])); ?></td>
+		</tr>
 	</tbody>
 	</table>
-	</div>
-
-
-
-
 </div>
+
+
+
+
+
 
 <div class="related">
 	<h3><?php echo __('fiscales relacionados'); ?></h3>
@@ -59,23 +59,27 @@
 			<td><?php echo $fiscal['codigoRepresentativo']; ?></td>
 			<td><?php echo $fiscal['audiencia_id']; ?></td>
 			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'fiscals', 'action' => 'view', $fiscal['id']),array('class' => 'btn btn-xs btn-info')); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'fiscals', 'action' => 'edit', $fiscal['id']),array('class' => 'btn btn-xs btn-warning')); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'fiscals', 'action' => 'delete', $fiscal['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $fiscal['id'])); ?>
+				<?php echo $this->Html->link(__('Ver detalle'), array('controller' => 'fiscals', 'action' => 'view', $fiscal['id']),array('class' => 'btn btn-xs btn-info')); ?>
+				<?php echo $this->Html->link(__('Editar'), array('controller' => 'fiscals', 'action' => 'edit', $fiscal['id']),array('class' => 'btn btn-xs btn-warning')); ?>
+				<?php echo $this->Form->postLink(__('Eliminar'), array('controller' => 'fiscals', 'action' => 'delete', $fiscal['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $fiscal['id'])); ?>
 			</td>
 		</tr>
 	<?php endforeach; ?>
 	</table>
 	</div>
+		
+
 
 <?php endif; ?>
 
+
+
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('New Fiscal'), array('controller' => 'fiscals', 'action' => 'add'),array('class' => 'btn btn-info')); ?> </li>
+			<li><?php echo $this->Html->link(__('Nuevo Fiscal'), array('controller' => 'fiscals', 'action' => 'add'),array('class' => 'btn btn-info')); ?> </li>
 		</ul>
 	</div>
-</div>
+
 <div class="related">
 	<h3><?php echo __('jueces relacionados'); ?></h3>
 	<?php if (!empty($proceso['Juez'])): ?>
@@ -99,21 +103,22 @@
 			<td><?php echo $juez['descripcion']; ?></td>
 			<td><?php echo $juez['audiencia_id']; ?></td>
 			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'juezs', 'action' => 'view', $juez['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'juezs', 'action' => 'edit', $juez['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'juezs', 'action' => 'delete', $juez['id']), array(), __('Are you sure you want to delete # %s?', $juez['id'])); ?>
+				<?php echo $this->Html->link(__('Ver detalle'), array('controller' => 'juezs', 'action' => 'view', $juez['id']),array('class' => 'btn btn-xs btn-info')); ?>
+				<?php echo $this->Html->link(__('Editar'), array('controller' => 'juezs', 'action' => 'edit', $juez['id']),array('class' => 'btn btn-xs btn-warning')); ?>
+				<?php echo $this->Form->postLink(__('Eliminar'), array('controller' => 'juezs', 'action' => 'delete', $juez['id']), array('class' => 'btn btn-xs btn-danger'), array(), __('Are you sure you want to delete # %s?', $juez['id'])); ?>
 			</td>
 		</tr>
 	<?php endforeach; ?>
 	</table>
 	</div>
 	</div>
+	
 <?php endif; ?>
 
 
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('New Juez'), array('controller' => 'juezs', 'action' => 'add'),array('class' => 'btn btn-info')); ?> </li>
+			<li><?php echo $this->Html->link(__('Nuevo Juez'), array('controller' => 'juezs', 'action' => 'add'),array('class' => 'btn btn-info')); ?> </li>
 		</ul>
 	</div>
 
@@ -122,7 +127,7 @@
 <div class="actions">
 <div class="btn-group">
   <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
-	<?php echo __('Actions'); ?><span class="caret"></span>
+	<?php echo __('Opciones'); ?><span class="caret"></span>
 		</button>
 	<ul class="dropdown-menu" role="menu">
 		<li><?php echo $this->Html->link(__('Edit Proceso'), array('action' => 'edit', $proceso['Proceso']['id'])); ?> </li>
@@ -138,6 +143,8 @@
 	</ul>
 
 
+</div>
+</div>
 </div>
 </div>
 

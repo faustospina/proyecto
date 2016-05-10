@@ -37,9 +37,7 @@ class JuezsController extends AppController {
 		$this->Juez->recursive = 0;
 
 		$this->paginate['Juez']['limit'] = 3;
-		//$this->paginate['Mesero']['conditions'] = array('Mesero.dni' => "34343");
 		$this->paginate['Juez']['order'] = array('Juez.id' => 'asc');
- 		//$this->Paginator->settings = $this->paginate;
 		$this->set('juezs', $this->paginate());
 	}
 

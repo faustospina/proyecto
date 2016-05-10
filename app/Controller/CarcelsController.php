@@ -31,9 +31,7 @@ class CarcelsController extends AppController {
 		$this->Carcel->recursive = 0;
 
 		$this->paginate['Carcel']['limit'] = 3;
-		//$this->paginate['Mesero']['conditions'] = array('Mesero.dni' => "34343");
 		$this->paginate['Carcel']['order'] = array('Carcel.id' => 'asc');
- 		//$this->Paginator->settings = $this->paginate;
 		$this->set('carcels', $this->paginate());
 	}
 

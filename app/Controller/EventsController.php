@@ -33,7 +33,7 @@ class EventsController extends AppController {
 		$i=0;
 		foreach ($tiposEventoAntes as $tipoEvento){
 
-            //$users[$item['User']['id']] = $item['User']['full_name'];
+          
         	$tiposEventos[$i]['id'] = $tipoEvento['event_types']['id'];
         	$tiposEventos[$i]['name'] = $tipoEvento['event_types']['name'];
         	$tiposEventos[$i]['color'] = $tipoEvento['event_types']['color'];
@@ -46,7 +46,7 @@ class EventsController extends AppController {
 		$i=0;
 		foreach ($eventoAntes as $evento){
 
-            //$users[$item['User']['id']] = $item['User']['full_name'];
+            
         	$eventos[$i]['id'] = $evento['events']['id'];
         	$eventos[$i]['title'] = $evento['events']['title'];
         	$eventos[$i]['start'] = $evento['events']['start'];

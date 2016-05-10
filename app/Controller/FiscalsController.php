@@ -33,9 +33,7 @@ class FiscalsController extends AppController {
 		$this->Fiscal->recursive = 0;
 
 		$this->paginate['Fiscal']['limit'] = 3;
-		//$this->paginate['Mesero']['conditions'] = array('Mesero.dni' => "34343");
 		$this->paginate['Fiscal']['order'] = array('Fiscal.id' => 'asc');
- 		//$this->Paginator->settings = $this->paginate;
 		$this->set('fiscals', $this->paginate());
 	}
 

@@ -1,6 +1,4 @@
-<br />
-<br />
-<br />
+
 <br />	
 <br />
 <div class="container">
@@ -26,19 +24,5 @@
 </p>
 </div>
 
-<div class="actions">
-<div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-	<?php echo __('Actions'); ?><span class="caret"></span>
-	 </button>
-	<ul class="dropdown-menu" role="menu">
-
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('User.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('User.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Acusados'), array('controller' => 'acusados', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Acusado'), array('controller' => 'acusados', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
-</div>
 </div>
 </div>

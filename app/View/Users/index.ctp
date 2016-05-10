@@ -1,7 +1,4 @@
-<br />
-<br />
-<br />
-<br />	
+
 <br />
 
 	
@@ -19,7 +16,6 @@
 			<th><?php echo $this->Paginator->sort('celular'); ?></th>
 			<th><?php echo $this->Paginator->sort('correo'); ?></th>
 			<th><?php echo $this->Paginator->sort('usuario'); ?></th>
-
 			<th><?php echo $this->Paginator->sort('Creado'); ?></th>
 			<th><?php echo $this->Paginator->sort('Modificado'); ?></th>
 			<th><?php echo $this->Paginator->sort('TituloProfesional'); ?></th>

@@ -8,20 +8,20 @@
 	<table class="table table-striped">
 	<thead>
 	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
+		
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
 			<th><?php echo $this->Paginator->sort('nroSala'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('MinPublico'); ?></th>
 			<th><?php echo $this->Paginator->sort('detenido'); ?></th>
 			<th><?php echo $this->Paginator->sort('descripcion'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th class="actions"><?php echo __('Opciones'); ?></th>
 	</tr>
 	</thead>
 	<tbody>
 	<?php foreach ($audiencias as $audiencia): ?>
 	<tr>
-		<td><?php echo h($audiencia['Audiencia']['id']); ?>&nbsp;</td>
+	
 		<td><?php echo h($audiencia['Audiencia']['nombre']); ?>&nbsp;</td>
 		<td><?php echo h($audiencia['Audiencia']['nroSala']); ?>&nbsp;</td>
 		<td><?php echo h($audiencia['Audiencia']['created']); ?>&nbsp;</td>

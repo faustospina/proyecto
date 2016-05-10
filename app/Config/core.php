@@ -103,8 +103,10 @@
  * assets through the Dispatcher is incredibly inefficient and
  * included primarily as a development convenience - and
  * thus not recommended for production applications.
+ * 
+ * //Configure::write('App.baseUrl', env('SCRIPT_NAME'));
  */
-	//Configure::write('App.baseUrl', env('SCRIPT_NAME'));
+	
 
 /**
  * To configure CakePHP to use a particular domain URL
@@ -112,26 +114,34 @@
  * configuration variable to the http(s) address to your domain. This
  * will override the automatic detection of full base URL and can be
  * useful when generating links from the CLI (e.g. sending emails)
+ * 
+ * //Configure::write('App.fullBaseUrl', 'http://example.com');
  */
-	//Configure::write('App.fullBaseUrl', 'http://example.com');
+	
 
 /**
  * Web path to the public images directory under webroot.
  * If not set defaults to 'img/'
+ * 
+ * //Configure::write('App.imageBaseUrl', 'img/');
  */
-	//Configure::write('App.imageBaseUrl', 'img/');
+	
 
 /**
  * Web path to the CSS files directory under webroot.
  * If not set defaults to 'css/'
+ * 
+ * 	//Configure::write('App.cssBaseUrl', 'css/');
  */
-	//Configure::write('App.cssBaseUrl', 'css/');
+
 
 /**
  * Web path to the js files directory under webroot.
  * If not set defaults to 'js/'
+ * 
+ * 	//Configure::write('App.jsBaseUrl', 'js/');
  */
-	//Configure::write('App.jsBaseUrl', 'js/');
+
 
 /**
  * Uncomment the define below to use CakePHP prefix routes.
@@ -148,14 +158,15 @@
  *	`admin_index()` and `/admin/controller/index`
  *	`manager_index()` and `/manager/controller/index`
  *
+ * 	//Configure::write('Routing.prefixes', array('admin'));
  */
-	//Configure::write('Routing.prefixes', array('admin'));
+
 
 /**
  * Turn off all caching application-wide.
- *
+ * 	//Configure::write('Cache.disable', true);
  */
-	//Configure::write('Cache.disable', true);
+
 
 /**
  * Enable cache checking.
@@ -165,8 +176,9 @@
  * You can either set it controller-wide by setting public $cacheAction = true,
  * or in each action using $this->cacheAction = true.
  *
+ * 	//Configure::write('Cache.check', true);
  */
-	//Configure::write('Cache.check', true);
+
 
 /**
  * Enable cache view prefixes.
@@ -175,8 +187,11 @@
  * helpful if you deploy the same application via multiple subdomains and languages,
  * for instance. Each version can then have its own view cache namespace.
  * Note: The final cache file name will then be `prefix_cachefilename`.
+ * 
+ * 
+ * 	//Configure::write('Cache.viewPrefix', 'prefix');
  */
-	//Configure::write('Cache.viewPrefix', 'prefix');
+
 
 /**
  * Session configuration.
@@ -236,8 +251,10 @@
  *
  * Set to `true` to apply timestamps when debug > 0. Set to 'force' to always enable
  * timestamping regardless of debug value.
+ * 
+ * 	//Configure::write('Asset.timestamp', true);
  */
-	//Configure::write('Asset.timestamp', true);
+
 
 /**
  * Compress CSS output by removing comments, whitespace, repeating tags, etc.
@@ -245,16 +262,22 @@
  * and /vendors/csspp/csspp.php
  *
  * To use, prefix the CSS link URL with '/ccss/' instead of '/css/' or use HtmlHelper::css().
+ * 
+ * 
+ * 	//Configure::write('Asset.filter.css', 'css.php');
  */
-	//Configure::write('Asset.filter.css', 'css.php');
+
 
 /**
  * Plug in your own custom JavaScript compressor by dropping a script in your webroot to handle the
  * output, and setting the config below to the name of the script.
  *
  * To use, prefix your JavaScript link URLs with '/cjs/' instead of '/js/' or use JsHelper::link().
+ * 
+ * 
+ * 	//Configure::write('Asset.filter.js', 'custom_javascript_output_filter.php');
  */
-	//Configure::write('Asset.filter.js', 'custom_javascript_output_filter.php');
+
 
 /**
  * The class name and database used in CakePHP's
@@ -266,16 +289,20 @@
 /**
  * Uncomment this line and correct your server timezone to fix
  * any date & time related errors.
+ * 
+ * 	//date_default_timezone_set('UTC');
+
  */
-	//date_default_timezone_set('UTC');
 
 /**
  * `Config.timezone` is available in which you can set users' timezone string.
  * If a method of CakeTime class is called with $timezone parameter as null and `Config.timezone` is set,
  * then the value of `Config.timezone` will be used. This feature allows you to set users' timezone just
  * once instead of passing it each time in function calls.
+ * 
+ * //Configure::write('Config.timezone', 'Europe/Paris');
  */
-	//Configure::write('Config.timezone', 'Europe/Paris');
+	
 
 /**
  * Cache Engine Configuration

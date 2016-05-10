@@ -37,8 +37,9 @@ if ($conexion->query($sql)->num_rows)
 
     // Ejecutamos nuestra sentencia sql
     $e = $conexion->query($sql); 
-
-    while($row=$e->fetch_array()) // realizamos un ciclo while para traer los eventos encontrados en la base de dato
+    
+    // realizamos un ciclo while para traer los eventos encontrados en la base de dato
+    while($row=$e->fetch_array()) 
     {
         // Alimentamos el array con los datos de los eventos
         $datos[$i] = $row; 

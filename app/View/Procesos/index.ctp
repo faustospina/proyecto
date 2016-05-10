@@ -10,7 +10,7 @@
 	<table class="table table-striped">
 	<thead>
 	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
+		
 			<th><?php echo $this->Paginator->sort('nombreDelito'); ?></th>
 			<th><?php echo $this->Paginator->sort('nombreVariacionDelito'); ?></th>
 			<th><?php echo $this->Paginator->sort('descripcion'); ?></th>
@@ -18,13 +18,13 @@
 			<th><?php echo $this->Paginator->sort('numeroProceso'); ?></th>
 			<th><?php echo $this->Paginator->sort('estado'); ?></th>
 			<th><?php echo $this->Paginator->sort('acusado_id'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th class="actions"><?php echo __('Opciones'); ?></th>
 	</tr>
 	</thead>
 	<tbody>
 	<?php foreach ($procesos as $proceso): ?>
 	<tr>
-		<td><?php echo h($proceso['Proceso']['id']); ?>&nbsp;</td>
+		
 		<td><?php echo h($proceso['Proceso']['nombreDelito']); ?>&nbsp;</td>
 		<td><?php echo h($proceso['Proceso']['nombreVariacionDelito']); ?>&nbsp;</td>
 		<td><?php echo h($proceso['Proceso']['descripcion']); ?>&nbsp;</td>

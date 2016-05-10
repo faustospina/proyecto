@@ -9,13 +9,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand">Consultorio Juridico</a>
+          <a class="navbar-brand">Archivo Jurídico</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><?php echo $this->Html->link('HOME', array('controller' => 'pages', 'action' => 'display', 'home'))  ?></li>
+            <li class="active"><?php echo $this->Html->link('INICIO', array('controller' => 'pages', 'action' => 'display', 'home'))  ?></li>
       <?php if($current_user['roll'] == 'user'): ?>
-             <li class="active"><?php echo $this->Html->link('calendario', array('controller' => 'events', 'action' => 'calendario'))  ?></li>
+             <li class="active"><?php echo $this->Html->link('Calendario', array('controller' => 'events', 'action' => 'calendario'))  ?></li>
       <?php endif; ?>
       <?php if($current_user['roll'] == 'admin'): ?>
       <li class="dropdown">
@@ -35,22 +35,22 @@
                   <li><?php echo $this->Html->link('Agregar juez', array('controller'=>'juezs','action'=>'add'))  ?> </li>
                   <li><?php echo $this->Html->link('Agregar fiscal', array('controller'=>'fiscals','action'=>'add'))  ?> </li>
                   <li><?php echo $this->Html->link('Agregar acusados', array('controller'=>'acusados','action'=>'add'))  ?> </li>
-                  <li><?php echo $this->Html->link('agregar proceso penal', array('controller'=>'procesos','action'=>'add'))  ?> </li>
+                  <li><?php echo $this->Html->link('Agregar proceso penal', array('controller'=>'procesos','action'=>'add'))  ?> </li>
                   <li><?php echo $this->Html->link('Agregar carceles', array('controller'=>'carcels','action'=>'add'))  ?> </li>
               </ul>
       </li>
       <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">listas de involucrados<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">istas de involucrados<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><?php echo $this->Html->link('Lista de jueces', array('controller'=>'juezs','action'=>'index'))  ?> </li>
                 <li><?php echo $this->Html->link('Lista de fiscales', array('controller'=>'fiscals','action'=>'index'))  ?> </li>
-                <li><?php echo $this->Html->link('lista de ciudades', array('controller'=>'ciudads','action'=>'index'))  ?> </li>
-                <li><?php echo $this->Html->link('lista de carceles', array('controller'=>'carcels','action'=>'index'))  ?> </li>
+                <li><?php echo $this->Html->link('Lista de ciudades', array('controller'=>'ciudads','action'=>'index'))  ?> </li>
+                <li><?php echo $this->Html->link('Lista de carceles', array('controller'=>'carcels','action'=>'index'))  ?> </li>
                 <li><?php echo $this->Html->link('lista de Audiencias', array('controller'=>'audiencias','action'=>'index'))  ?> </li>
-                <li><?php echo $this->Html->link('lista de acusados', array('controller'=>'acusados','action'=>'index'))  ?> </li>
-                <li><?php echo $this->Html->link('lista de procesos penales', array('controller'=>'procesos','action'=>'index'))  ?> </li>
-               <li><?php echo $this->Html->link('lista de procesos asociados a un fiscal', array('controller'=>'fiscalsProcesos','action'=>'index'))  ?> </li>
-                <li><?php echo $this->Html->link('lista de procesos asociados a un juez', array('controller'=>'juezsProcesos','action'=>'index'))  ?> </li>
+                <li><?php echo $this->Html->link('Lista de acusados', array('controller'=>'acusados','action'=>'index'))  ?> </li>
+                <li><?php echo $this->Html->link('Lista de procesos penales', array('controller'=>'procesos','action'=>'index'))  ?> </li>
+               <li><?php echo $this->Html->link('Lista de procesos asociados a un fiscal', array('controller'=>'fiscalsProcesos','action'=>'index'))  ?> </li>
+                <li><?php echo $this->Html->link('Lista de procesos asociados a un juez', array('controller'=>'juezsProcesos','action'=>'index'))  ?> </li>
         
               </ul>
     

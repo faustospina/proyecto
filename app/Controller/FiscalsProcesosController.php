@@ -33,9 +33,7 @@ class FiscalsProcesosController extends AppController {
 		$this->FiscalsProceso->recursive = 0;
 
 		$this->paginate['FiscalsProceso']['limit'] = 3;
-		//$this->paginate['Mesero']['conditions'] = array('Mesero.dni' => "34343");
 		$this->paginate['FiscalsProceso']['order'] = array('FiscalsProceso.id' => 'asc');
- 		//$this->Paginator->settings = $this->paginate;
 		$this->set('fiscalsProcesos', $this->paginate());
 	}
 /**

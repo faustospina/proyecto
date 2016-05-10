@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <?php echo $this->Html->link('Consultorio Juridico', array('controller' => 'users', 'action' => 'login'), array('class' => 'navbar-brand')) ?>
+          <?php echo $this->Html->link('Archivo Jurídico', array('controller' => 'users', 'action' => 'login'), array('class' => 'navbar-brand')) ?>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <?php echo $this->Form->create('User', array('class' => 'navbar-form navbar-right')); ?>

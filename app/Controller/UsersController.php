@@ -24,13 +24,23 @@ class UsersController extends AppController {
         )
     );
 
+    
+/**
+ * index beferoFilter
+ *
+ * @return void
+ */
 public function beforeFilter()
 	{
 		parent::beforeFilter();
-		
-	//	$this->Auth->allow('add','view','edit','index');
-		
+ 
 	}
+	
+/**
+ * index login
+ *
+ * @return void
+ */	
 public function login()
 	{
 		if($this->request->is('post'))
@@ -42,7 +52,12 @@ public function login()
 			$this->Session->setFlash('Usuario y/o contraseña son incorrectos!', 'default', array('class' => 'alert alert-danger'));
 		}
 	}
-
+	
+/**
+ * index logout
+ *
+ * @return void
+ */
 public function logout()
 	{
 		return $this->redirect($this->Auth->logout());
@@ -57,9 +72,7 @@ public function logout()
 		$this->User->recursive = 0;
 
 		$this->paginate['User']['limit'] = 3;
-		//$this->paginate['Mesero']['conditions'] = array('Mesero.dni' => "34343");
 		$this->paginate['User']['order'] = array('User.id' => 'asc');
- 		//$this->Paginator->settings = $this->paginate;
 		$this->set('users', $this->paginate());
 	}
 
@@ -86,7 +99,6 @@ public function logout()
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->User->create();
-			//configurar el roll al agregar
 			$this->request->data['User']['roll'] = 'user';
 			if ($this->User->save($this->request->data)) {
 				$this->Session->setFlash('se ha agregado el susuario satisfactoriamente', 'default', array('class' => 'alert alert-success'));
