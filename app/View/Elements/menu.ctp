@@ -40,7 +40,7 @@
               </ul>
       </li>
       <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">istas de involucrados<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Listas de involucrados<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><?php echo $this->Html->link('Lista de jueces', array('controller'=>'juezs','action'=>'index'))  ?> </li>
                 <li><?php echo $this->Html->link('Lista de fiscales', array('controller'=>'fiscals','action'=>'index'))  ?> </li>

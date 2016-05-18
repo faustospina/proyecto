@@ -30,7 +30,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css(array('style.css' ,'bootstrap.min','bootstrap-theme.min', 'fileinput.min', 'jquery-ui.min','bootstrap-datetimepicker.min','calendar'));
-		echo $this->Html->script(array('jquery.min', 'bootstrap.min', 'fileinput.min', 'jquery-ui.min'/*, 'search','bootstrap-datetimepicker.es','bootstrap-datetimepicker','addtocart','cart'*/,'docs.min',/*'fileinput.min'*/'jquery.animate-colors'/*,'moment'*/,'underscore-min'/*,'search' /*'jquery.qtip-1.0.0-rc3.min'/*,'jquery-1.5.min','ready'*/));
+		echo $this->Html->script(array('jquery.min', 'bootstrap.min', 'fileinput.min', 'jquery-ui.min','search'/*, ,'bootstrap-datetimepicker.es','bootstrap-datetimepicker','addtocart','cart'*/,'docs.min',/*'fileinput.min'*/'jquery.animate-colors'/*,'moment'*/,'underscore-min'/*,'search' /*'jquery.qtip-1.0.0-rc3.min'/*,'jquery-1.5.min','ready'*/));
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');

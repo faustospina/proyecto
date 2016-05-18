@@ -10,7 +10,7 @@
 	<table class="table table-striped">
 	<thead>
 	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
+			
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
 			<th><?php echo $this->Paginator->sort('apellidos'); ?></th>
 			<th><?php echo $this->Paginator->sort('celular'); ?></th>
@@ -26,7 +26,7 @@
 	<tbody>
 	<?php foreach ($users as $user): ?>
 	<tr>
-		<td><?php echo h($user['User']['id']); ?>&nbsp;</td>
+		
 		<td><?php echo h($user['User']['nombre']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['apellidos']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['celular']); ?>&nbsp;</td>

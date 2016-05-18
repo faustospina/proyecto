@@ -12,7 +12,7 @@
 	<table class="table table-striped">
 	<thead>
 	<tr>
-		<th><?php echo __('Id'); ?></th>
+		
 		<th><?php echo __('Nombre'); ?></th>
 		<th><?php echo __('Apellidos'); ?></th>
 		<th><?php echo __('Celular'); ?></th>
@@ -27,7 +27,7 @@
 	</thead>
 	<tbody>
 	<tr>
-		<td><?php echo h($user['User']['id']); ?>&nbsp;</td>
+		
 		<td><?php echo h($user['User']['nombre']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['apellidos']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['celular']); ?>&nbsp;</td>
@@ -49,7 +49,7 @@
 	<div class="col-md-12">
 	<table class="table table-striped">
 	<tr>
-		<th><?php echo __('Id'); ?></th>
+		
 		<th><?php echo __('Creado'); ?></th>
 		<th><?php echo __('Nombre'); ?></th>
 		<th><?php echo __('Apellidos'); ?></th>
@@ -59,14 +59,12 @@
 		<th><?php echo __('CapacidadPago'); ?></th>
 		<th><?php echo __('Modified'); ?></th>
 		<th><?php echo __('Sentencia'); ?></th>
-		<th><?php echo __('User Id'); ?></th>
-		<th><?php echo __('Ciudad Id'); ?></th>
-		<th><?php echo __('Audiencia Id'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+	
+		<th class="actions"><?php echo __('Opciones'); ?></th>
 	</tr>
 	<?php foreach ($user['Acusado'] as $acusado): ?>
 		<tr>
-			<td><?php echo $acusado['id']; ?></td>
+		
 			<td><?php echo $acusado['created']; ?></td>
 			<td><?php echo $acusado['nombre']; ?></td>
 			<td><?php echo $acusado['apellidos']; ?></td>
@@ -76,13 +74,11 @@
 			<td><?php echo $acusado['capacidadPago']; ?></td>
 			<td><?php echo $acusado['modified']; ?></td>
 			<td><?php echo $acusado['sentencia']; ?></td>
-			<td><?php echo $acusado['user_id']; ?></td>
-			<td><?php echo $acusado['ciudad_id']; ?></td>
-			<td><?php echo $acusado['audiencia_id']; ?></td>
+			
 			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'acusados', 'action' => 'view', $acusado['id']),array('class' => 'btn btn-xs btn-info')); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'acusados', 'action' => 'edit', $acusado['id']),array('class' => 'btn btn-xs btn-warning')); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'acusados', 'action' => 'delete', $acusado['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $acusado['id'])); ?>
+				<?php echo $this->Html->link(__('Ver Informacion detallada'), array('controller' => 'acusados', 'action' => 'view', $acusado['id']),array('class' => 'btn btn-xs btn-info')); ?>
+				<?php echo $this->Html->link(__('Editar'), array('controller' => 'acusados', 'action' => 'edit', $acusado['id']),array('class' => 'btn btn-xs btn-warning')); ?>
+				<?php echo $this->Form->postLink(__('Eliminar'), array('controller' => 'acusados', 'action' => 'delete', $acusado['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $acusado['id'])); ?>
 			</td>
 		</tr>
 	<?php endforeach; ?>
@@ -93,7 +89,7 @@
 <div class="col-md-2">
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('New Acusado'), array('controller' => 'acusados', 'action' => 'add'),array('class' => 'btn btn-info')); ?> </li>
+			<li><?php echo $this->Html->link(__('Nuevo Acusado'), array('controller' => 'acusados', 'action' => 'add'),array('class' => 'btn btn-info')); ?> </li>
 		</ul>
 	</div>
 </div>
@@ -102,15 +98,15 @@
 <div class="actions">
 <div class="btn-group">
   <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
-	<?php echo __('Actions'); ?><span class="caret"></span>
+	<?php echo __('Opciones'); ?><span class="caret"></span>
 	</button>
 	<ul class="dropdown-menu" role="menu">
-		<li><?php echo $this->Html->link(__('Edit User'), array('action' => 'edit', $user['User']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete User'), array('action' => 'delete', $user['User']['id']), array(), __('Are you sure you want to delete # %s?', $user['User']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Acusados'), array('controller' => 'acusados', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Acusado'), array('controller' => 'acusados', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $user['User']['id'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $user['User']['id']), array(), __('Are you sure you want to delete # %s?', $user['User']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista Usuarios'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo Usuario'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Acusado'), array('controller' => 'acusados', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo Acusado'), array('controller' => 'acusados', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
 </div>
