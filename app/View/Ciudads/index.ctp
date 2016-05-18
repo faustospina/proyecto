@@ -7,15 +7,15 @@
 	<table class="table table-striped">
 	<thead>
 	<tr>
-			
+		
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th class="actions"><?php echo __('Opciones'); ?></th>
 	</tr>
 	</thead>
 	<tbody>
 	<?php foreach ($ciudads as $ciudad): ?>
 	<tr>
-		
+	
 		<td><?php echo h($ciudad['Ciudad']['nombre']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('Ver Información detallada'), array('action' => 'view', $ciudad['Ciudad']['id']),array('class' => 'btn btn-xs btn-info')); ?>

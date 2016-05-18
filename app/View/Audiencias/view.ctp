@@ -89,28 +89,26 @@
 	<div class="col-md-12">
 	<table class="table table-striped">
 	<tr>
-		<th><?php echo __('Id'); ?></th>
+	
 		<th><?php echo __('Created'); ?></th>
 		<th><?php echo __('Nombre'); ?></th>
 		<th><?php echo __('NumeroPatios'); ?></th>
 		<th><?php echo __('NumeroCelda'); ?></th>
 		<th><?php echo __('Modified'); ?></th>
 		<th><?php echo __('FechaVisita'); ?></th>
-		<th><?php echo __('Ciudad Id'); ?></th>
-		<th><?php echo __('Audiencia Id'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+	
+		<th class="actions"><?php echo __('Opciones'); ?></th>
 	</tr>
 	<?php foreach ($audiencia['Carcel'] as $carcel): ?>
 		<tr>
-			<td><?php echo $carcel['id']; ?></td>
+			
 			<td><?php echo $carcel['created']; ?></td>
 			<td><?php echo $carcel['nombre']; ?></td>
 			<td><?php echo $carcel['numeroPatios']; ?></td>
 			<td><?php echo $carcel['numeroCelda']; ?></td>
 			<td><?php echo $carcel['modified']; ?></td>
 			<td><?php echo $carcel['fechaVisita']; ?></td>
-			<td><?php echo $carcel['ciudad_id']; ?></td>
-			<td><?php echo $carcel['audiencia_id']; ?></td>
+		
 			<td class="actions">
 				<?php echo $this->Html->link(__('Ver Informacion detallada'), array('controller' => 'carcels', 'action' => 'view', $carcel['id']),array('class' => 'btn btn-xs btn-info')); ?>
 				<?php echo $this->Html->link(__('Editar'), array('controller' => 'carcels', 'action' => 'edit', $carcel['id']),array('class' => 'btn btn-xs btn-warning')); ?>
@@ -137,20 +135,20 @@
 <div class="col-md-12">	
 	<table class="table table-striped">
 	<tr>
-		<th><?php echo __('Id'); ?></th>
+		
 		<th><?php echo __('Nombre'); ?></th>
 		<th><?php echo __('Apellidos'); ?></th>
 		<th><?php echo __('CodigoRepresentativo'); ?></th>
-		<th><?php echo __('Audiencia Id'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+	
+		<th class="actions"><?php echo __('Opciones'); ?></th>
 	</tr>
 	<?php foreach ($audiencia['Fiscal'] as $fiscal): ?>
 		<tr>
-			<td><?php echo $fiscal['id']; ?></td>
+		
 			<td><?php echo $fiscal['nombre']; ?></td>
 			<td><?php echo $fiscal['apellidos']; ?></td>
 			<td><?php echo $fiscal['codigoRepresentativo']; ?></td>
-			<td><?php echo $fiscal['audiencia_id']; ?></td>
+		
 			<td class="actions">
 				<?php echo $this->Html->link(__('Ver detalle'), array('controller' => 'fiscals', 'action' => 'view', $fiscal['id']),array('class' => 'btn btn-xs btn-info')); ?>
 				<?php echo $this->Html->link(__('Editar'), array('controller' => 'fiscals', 'action' => 'edit', $fiscal['id']),array('class' => 'btn btn-xs btn-warning')); ?>
@@ -163,7 +161,7 @@
 	
 <?php endif; ?>
 
-	<div class="Opciones">
+	<div class="actions">
 		<ul>
 			<li><?php echo $this->Html->link(__('Nuevo Fiscal'), array('controller' => 'fiscals', 'action' => 'add'),array('class' => 'btn btn-info')); ?> </li>
 		</ul>
@@ -180,22 +178,22 @@
 	<div class="col-md-12">	
 	<table class="table table-striped">
 	<tr>
-		<th><?php echo __('Id'); ?></th>
+		
 		<th><?php echo __('Nombre'); ?></th>
 		<th><?php echo __('Apellidos'); ?></th>
 		<th><?php echo __('CodigoRepresentativo'); ?></th>
 		<th><?php echo __('Descripcion'); ?></th>
-		<th><?php echo __('Audiencia Id'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+	
+		<th class="actions"><?php echo __('Opciones'); ?></th>
 	</tr>
 	<?php foreach ($audiencia['Juez'] as $juez): ?>
 		<tr>
-			<td><?php echo $juez['id']; ?></td>
+			
 			<td><?php echo $juez['nombre']; ?></td>
 			<td><?php echo $juez['apellidos']; ?></td>
 			<td><?php echo $juez['codigoRepresentativo']; ?></td>
 			<td><?php echo $juez['descripcion']; ?></td>
-			<td><?php echo $juez['audiencia_id']; ?></td>
+		
 			<td class="actions">
 				<?php echo $this->Html->link(__('Ver detalle'), array('controller' => 'juezs', 'action' => 'view', $juez['id']),array('class' => 'btn btn-xs btn-info')); ?>
 				<?php echo $this->Html->link(__('Editar'), array('controller' => 'juezs', 'action' => 'edit', $juez['id']),array('class' => 'btn btn-xs btn-warning')); ?>

@@ -12,7 +12,7 @@
 	<table class="table table-striped">
 	<thead>
 	<tr>
-		
+	
 		<th><?php echo __('Nombre'); ?></th>
 		<th><?php echo __('Apellidos'); ?></th>
 		<th><?php echo __('Celular'); ?></th>
@@ -59,7 +59,7 @@
 		<th><?php echo __('CapacidadPago'); ?></th>
 		<th><?php echo __('Modified'); ?></th>
 		<th><?php echo __('Sentencia'); ?></th>
-	
+		
 		<th class="actions"><?php echo __('Opciones'); ?></th>
 	</tr>
 	<?php foreach ($user['Acusado'] as $acusado): ?>
@@ -74,9 +74,9 @@
 			<td><?php echo $acusado['capacidadPago']; ?></td>
 			<td><?php echo $acusado['modified']; ?></td>
 			<td><?php echo $acusado['sentencia']; ?></td>
-			
+		
 			<td class="actions">
-				<?php echo $this->Html->link(__('Ver Informacion detallada'), array('controller' => 'acusados', 'action' => 'view', $acusado['id']),array('class' => 'btn btn-xs btn-info')); ?>
+				<?php echo $this->Html->link(__('Ver información detallada'), array('controller' => 'acusados', 'action' => 'view', $acusado['id']),array('class' => 'btn btn-xs btn-info')); ?>
 				<?php echo $this->Html->link(__('Editar'), array('controller' => 'acusados', 'action' => 'edit', $acusado['id']),array('class' => 'btn btn-xs btn-warning')); ?>
 				<?php echo $this->Form->postLink(__('Eliminar'), array('controller' => 'acusados', 'action' => 'delete', $acusado['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $acusado['id'])); ?>
 			</td>
@@ -105,7 +105,7 @@
 		<li><?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $user['User']['id']), array(), __('Are you sure you want to delete # %s?', $user['User']['id'])); ?> </li>
 		<li><?php echo $this->Html->link(__('Lista Usuarios'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Nuevo Usuario'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Acusado'), array('controller' => 'acusados', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista Acusados'), array('controller' => 'acusados', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Nuevo Acusado'), array('controller' => 'acusados', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

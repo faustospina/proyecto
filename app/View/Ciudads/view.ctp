@@ -47,7 +47,7 @@
 		<div class="col-md-12">
 	<table class="table table-striped">
 	<tr>
-		
+	
 		<th><?php echo __('fecha de cracion'); ?></th>
 		<th><?php echo __('Nombre'); ?></th>
 		<th><?php echo __('Apellidos'); ?></th>
@@ -58,7 +58,7 @@
 		<th><?php echo __('fecha de modificacion'); ?></th>
 		<th><?php echo __('Sentencia'); ?></th>
 	
-		<th class="actions"><?php echo __('Opciones'); ?></th>
+		<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($ciudad['Acusado'] as $acusado): ?>
 		<tr>
@@ -74,7 +74,7 @@
 			<td><?php echo $acusado['sentencia']; ?></td>
 		
 			<td class="actions">
-				<?php echo $this->Html->link(__('Ver Informacion detallada'), array('controller' => 'acusados', 'action' => 'view', $acusado['id']),array('class' => 'btn btn-xs btn-info')); ?>
+				<?php echo $this->Html->link(__('Ver'), array('controller' => 'acusados', 'action' => 'view', $acusado['id']),array('class' => 'btn btn-xs btn-info')); ?>
 				<?php echo $this->Html->link(__('Editar'), array('controller' => 'acusados', 'action' => 'edit', $acusado['id']),array('class' => 'btn btn-xs btn-warning')); ?>
 				<?php echo $this->Form->postLink(__('Eliminar'), array('controller' => 'acusados', 'action' => 'delete', $acusado['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $acusado['id'])); ?>
 			</td>
@@ -100,27 +100,25 @@
 		<th><?php echo __('Nombre'); ?></th>
 		<th><?php echo __('NumeroPatios'); ?></th>
 		<th><?php echo __('NumeroCelda'); ?></th>
-		<th><?php echo __('fecha de modificacion'); ?></th>
+		<th><?php echo __('Modificado'); ?></th>
 		<th><?php echo __('FechaVisita'); ?></th>
-		<th><?php echo __('Ciudad Id'); ?></th>
-		<th><?php echo __('Audiencia Id'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+	
+		<th class="actions"><?php echo __('Opciones'); ?></th>
 	</tr>
 	<?php foreach ($ciudad['Carcel'] as $carcel): ?>
 		<tr>
-			
+			+
 			<td><?php echo $carcel['created']; ?></td>
 			<td><?php echo $carcel['nombre']; ?></td>
 			<td><?php echo $carcel['numeroPatios']; ?></td>
 			<td><?php echo $carcel['numeroCelda']; ?></td>
 			<td><?php echo $carcel['modified']; ?></td>
 			<td><?php echo $carcel['fechaVisita']; ?></td>
-			<td><?php echo $carcel['ciudad_id']; ?></td>
-			<td><?php echo $carcel['audiencia_id']; ?></td>
+		
 			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'carcels', 'action' => 'view', $carcel['id']),array('class' => 'btn btn-xs btn-info')); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'carcels', 'action' => 'edit', $carcel['id']),array('class' => 'btn btn-xs btn-warning')); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'carcels', 'action' => 'delete', $carcel['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $carcel['id'])); ?>
+				<?php echo $this->Html->link(__('Ver'), array('controller' => 'carcels', 'action' => 'view', $carcel['id']),array('class' => 'btn btn-xs btn-info')); ?>
+				<?php echo $this->Html->link(__('Editar'), array('controller' => 'carcels', 'action' => 'edit', $carcel['id']),array('class' => 'btn btn-xs btn-warning')); ?>
+				<?php echo $this->Form->postLink(__('Eliminar'), array('controller' => 'carcels', 'action' => 'delete', $carcel['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $carcel['id'])); ?>
 			</td>
 		</tr>
 	<?php endforeach; ?>

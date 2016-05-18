@@ -10,20 +10,18 @@
 	<table class="table table-striped">
 	<thead>
 	<tr>
-			
+			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
 			<th><?php echo $this->Paginator->sort('apellidos'); ?></th>
 			<th><?php echo $this->Paginator->sort('celular'); ?></th>
 			<th><?php echo $this->Paginator->sort('correo'); ?></th>
 			<th><?php echo $this->Paginator->sort('usuario'); ?></th>
-<<<<<<< HEAD
 			<th><?php echo $this->Paginator->sort('Creado'); ?></th>
 			<th><?php echo $this->Paginator->sort('Modificado'); ?></th>
-=======
+
 
 			<th><?php echo $this->Paginator->sort('Fecha Creado'); ?></th>
 			<th><?php echo $this->Paginator->sort('Fecha Modificado'); ?></th>
->>>>>>> 2c112243ee842d25f74ca9b4b1f549c25c672e33
 			<th><?php echo $this->Paginator->sort('TituloProfesional'); ?></th>
 			<th><?php echo $this->Paginator->sort('Rol'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
@@ -32,7 +30,7 @@
 	<tbody>
 	<?php foreach ($users as $user): ?>
 	<tr>
-		
+		<td><?php echo h($user['User']['id']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['nombre']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['apellidos']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['celular']); ?>&nbsp;</td>

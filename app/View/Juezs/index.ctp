@@ -46,13 +46,11 @@
 		<td>
 			<?php echo $this->Html->link($juez['Audiencia']['nombre'], array('controller' => 'audiencias', 'action' => 'view', $juez['Audiencia']['id'])); ?>
 		</td>
-<<<<<<< HEAD
-		<td class="Opciones">
-			<?php echo $this->Html->link(__('Ver Informacion detallada'), array('action' => 'view', $juez['Juez']['id']),array('class' => 'btn btn-xs btn-info')); ?>
-=======
+		
+
 		<td class="actions">
 			<?php echo $this->Html->link(__('Ver información detallada'), array('action' => 'view', $juez['Juez']['id']),array('class' => 'btn btn-xs btn-info')); ?>
->>>>>>> 2c112243ee842d25f74ca9b4b1f549c25c672e33
+
 			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $juez['Juez']['id']),array('class' => 'btn btn-xs btn-warning')); ?>
 			<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $juez['Juez']['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $juez['Juez']['id'])); ?>
 		</td>
