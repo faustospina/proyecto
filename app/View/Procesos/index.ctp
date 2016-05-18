@@ -35,7 +35,7 @@
 			<?php echo $this->Html->link($proceso['Acusado']['nombre'], array('controller' => 'acusados', 'action' => 'view', $proceso['Acusado']['id'])); ?>
 		</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('Ver Informacion detallada'), array('action' => 'view', $proceso['Proceso']['id']),array('class' => 'btn btn-xs btn-info')); ?>
+			<?php echo $this->Html->link(__('Ver Información detallada'), array('action' => 'view', $proceso['Proceso']['id']),array('class' => 'btn btn-xs btn-info')); ?>
 			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $proceso['Proceso']['id']),array('class' => 'btn btn-xs btn-warning')); ?>
 			<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $proceso['Proceso']['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $proceso['Proceso']['id'])); ?>
 		</td>

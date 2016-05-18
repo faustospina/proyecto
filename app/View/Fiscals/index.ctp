@@ -28,7 +28,11 @@
 			<?php echo $this->Html->link($fiscal['Audiencia']['nombre'], array('controller' => 'audiencias', 'action' => 'view', $fiscal['Audiencia']['id'])); ?>
 		</td>
 		<td class="actions">
+<<<<<<< HEAD
 			<?php echo $this->Html->link(__('Ver Información detallada'), array('action' => 'view', $fiscal['Fiscal']['id']),array('class' => 'btn btn-xs btn-info')); ?>
+=======
+			<?php echo $this->Html->link(__('Ver información detallada'), array('action' => 'view', $fiscal['Fiscal']['id']),array('class' => 'btn btn-xs btn-info')); ?>
+>>>>>>> 2c112243ee842d25f74ca9b4b1f549c25c672e33
 			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $fiscal['Fiscal']['id']),array('class' => 'btn btn-xs btn-warning')); ?>
 			<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $fiscal['Fiscal']['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $fiscal['Fiscal']['id'])); ?>
 		</td>

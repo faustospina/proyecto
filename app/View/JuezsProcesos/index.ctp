@@ -22,7 +22,7 @@
 		<td><?php echo h($juezsProceso['Juez']['nombre']); ?>&nbsp;</td>
 	
 		<td class="actions">
-			<?php echo $this->Html->link(__('Ver Informacion detallada'), array('action' => 'view', $juezsProceso['JuezsProceso']['id']),array('class' => 'btn btn-xs btn-info')); ?>
+			<?php echo $this->Html->link(__('Ver información detallada'), array('action' => 'view', $juezsProceso['JuezsProceso']['id']),array('class' => 'btn btn-xs btn-info')); ?>
 			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $juezsProceso['JuezsProceso']['id']),array('class' => 'btn btn-xs btn-warning')); ?>
 			<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $juezsProceso['JuezsProceso']['id']), array('class' => 'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $juezsProceso['JuezsProceso']['id'])); ?>
 		</td>
