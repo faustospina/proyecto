@@ -45,7 +45,7 @@ class FiscalsProcesosController extends AppController {
  */
 	public function view($id = null) {
 		if (!$this->FiscalsProceso->exists($id)) {
-			throw new NotFoundException(__('Invalid fiscals proceso'));
+			throw new NotFoundException(__('Invalido procesos de  fiscales '));
 		}
 		$options = array('conditions' => array('FiscalsProceso.' . $this->FiscalsProceso->primaryKey => $id));
 		$this->set('fiscalsProceso', $this->FiscalsProceso->find('first', $options));
@@ -60,10 +60,10 @@ class FiscalsProcesosController extends AppController {
 		if ($this->request->is('post')) {
 			$this->FiscalsProceso->create();
 			if ($this->FiscalsProceso->save($this->request->data)) {
-				$this->Session->setFlash(__('The fiscals proceso has been saved.'));
+				$this->Session->setFlash('el fiscal se a guardado con exito!', 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The fiscals proceso could not be saved. Please, try again.'));
+				$this->Session->setFlash('no se ha podido guardar', array('class' => 'alert alert-danger'));
 			}
 		}
 	}
@@ -77,14 +77,14 @@ class FiscalsProcesosController extends AppController {
  */
 	public function edit($id = null) {
 		if (!$this->FiscalsProceso->exists($id)) {
-			throw new NotFoundException(__('Invalid fiscals proceso'));
+			throw new NotFoundException(__('Invalido el proceso del fiscal '));
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->FiscalsProceso->save($this->request->data)) {
-				$this->Session->setFlash(__('The fiscals proceso has been saved.'));
+				$this->Session->setFlash(__('los  proceso fiscales ha sido guardado.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The fiscals proceso could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('los  proceso fiscales no se guardo.inténtelo de nuevo.'));
 			}
 		} else {
 			$options = array('conditions' => array('FiscalsProceso.' . $this->FiscalsProceso->primaryKey => $id));
@@ -102,13 +102,13 @@ class FiscalsProcesosController extends AppController {
 	public function delete($id = null) {
 		$this->FiscalsProceso->id = $id;
 		if (!$this->FiscalsProceso->exists()) {
-			throw new NotFoundException(__('Invalid fiscals proceso'));
+			throw new NotFoundException(__('no existe el proceso de los fiscales '));
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->FiscalsProceso->delete()) {
-			$this->Session->setFlash(__('The fiscals proceso has been deleted.'));
+			$this->Session->setFlash(__('los  proceso fiscales ha sido eliminado.'));
 		} else {
-			$this->Session->setFlash(__('The fiscals proceso could not be deleted. Please, try again.'));
+			$this->Session->setFlash(__('los  proceso fiscales no se elimino.inténtelo de nuevo.'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}

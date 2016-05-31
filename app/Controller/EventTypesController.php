@@ -34,7 +34,7 @@ class EventTypesController extends AppController {
  */
 	public function view($id = null) {
 		if (!$this->EventType->exists($id)) {
-			throw new NotFoundException(__('Invalid event type'));
+			throw new NotFoundException(__('Invalido este tipo de evento'));
 		}
 		$options = array('conditions' => array('EventType.' . $this->EventType->primaryKey => $id));
 		$this->set('eventType', $this->EventType->find('first', $options));
@@ -49,10 +49,10 @@ class EventTypesController extends AppController {
 		if ($this->request->is('post')) {
 			$this->EventType->create();
 			if ($this->EventType->save($this->request->data)) {
-				$this->Session->setFlash(__('The event type has been saved.'));
+				$this->Session->setFlash(__('eveto guardado.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The event type could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('no guardado.inténtelo de nuevo.'));
 			}
 		}
 	}
@@ -66,14 +66,14 @@ class EventTypesController extends AppController {
  */
 	public function edit($id = null) {
 		if (!$this->EventType->exists($id)) {
-			throw new NotFoundException(__('Invalid event type'));
+			throw new NotFoundException(__('este tipo de evento no existe'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->EventType->save($this->request->data)) {
-				$this->Session->setFlash(__('The event type has been saved.'));
+				$this->Session->setFlash(__('este evento editado.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The event type could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('no se ha edito.inténtelo de nuevo.'));
 			}
 		} else {
 			$options = array('conditions' => array('EventType.' . $this->EventType->primaryKey => $id));
@@ -91,13 +91,13 @@ class EventTypesController extends AppController {
 	public function delete($id = null) {
 		$this->EventType->id = $id;
 		if (!$this->EventType->exists()) {
-			throw new NotFoundException(__('Invalid event type'));
+			throw new NotFoundException(__(' Invalido evento'));
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->EventType->delete()) {
-			$this->Session->setFlash(__('The event type has been deleted.'));
+			$this->Session->setFlash(__('ha sido eliminado.'));
 		} else {
-			$this->Session->setFlash(__('The event type could not be deleted. Please, try again.'));
+			$this->Session->setFlash(__('no se elimino. inténtelo de nuevo.'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}

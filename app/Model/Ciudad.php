@@ -35,6 +35,14 @@ class Ciudad extends AppModel {
 				'message' => 'ya se encuentra en la base de datos',
 				
 				),
+			'normaltext' => array(
+				'rule' => array('custom','/^[[:alpha:]](\s*[[:alpha:]]*)*$/i'),
+				'message' => 'el nombre debería contener sólo letras'
+				),
+			'between' => array(
+                'rule' => array('lengthBetween', 4, 15),
+                'message' => 'caracteres entre 4 y 15'
+            )
 		),
 	);
 

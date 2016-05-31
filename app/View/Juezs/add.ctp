@@ -29,11 +29,11 @@
 	</button>
 	<ul class="dropdown-menu" role="menu">
 
-		<li><?php echo $this->Html->link(__('Lista de Juezes'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('Lista de Audiencias'), array('controller' => 'audiencias', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nueva Audiencia'), array('controller' => 'audiencias', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Lista de Procesos'), array('controller' => 'procesos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nuevo Proceso'), array('controller' => 'procesos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de jueces'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('Lista de audiencias'), array('controller' => 'audiencias', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nueva audiencia'), array('controller' => 'audiencias', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de procesos'), array('controller' => 'procesos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo proceso'), array('controller' => 'procesos', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
 </div>

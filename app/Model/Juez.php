@@ -30,11 +30,11 @@ class Juez extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-			'unique' =>array(
-				'rule' => array('isUnique'),
-				'message' => 'ya se encuentra en la base de datos',
-				
-				),
+		
+			'normaltext' => array(
+				'rule' => array('custom','/^[[:alpha:]](\s*[[:alpha:]]*)*$/i'),
+				'message' => 'El nombre debería contener sólo letras'
+				)
 		),
 		'apellidos' => array(
 			'notEmpty' => array(
@@ -45,6 +45,10 @@ class Juez extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+			'normaltext' => array(
+				'rule' => array('custom','/^[[:alpha:]](\s*[[:alpha:]]*)*$/i'),
+				'message' => 'los apellidos debería contener sólo letras'
+				)
 		),
 		'codigoRepresentativo' => array(
 			'notEmpty' => array(
@@ -55,6 +59,15 @@ class Juez extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+			'unique' =>array(
+				'rule' => array('isUnique'),
+				'message' => 'ya se encuentra en la base de datos',
+				
+				),
+			'numeric' => array(
+				'rule' => array('numeric'),
+				'message' => 'solo se aceptan digitos',
+				)
 		),
 		'descripcion' => array(
 			'notEmpty' => array(

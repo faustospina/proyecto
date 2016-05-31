@@ -50,6 +50,10 @@ public $actsAs = array(
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+			'normaltext' => array(
+				'rule' => array('custom','/^[[:alpha:]](\s*[[:alpha:]]*)*$/i'),
+				'message' => 'El nombre debería contener sólo letras'
+				)
 		),
 
 		'apellidos' => array(
@@ -61,6 +65,10 @@ public $actsAs = array(
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+				'normaltext' => array(
+				'rule' => array('custom','/^[[:alpha:]](\s*[[:alpha:]]*)*$/i'),
+				'message' => 'los apellidos debería contener sólo letras'
+				)
 		),
 		'cedula' => array(
 			'notEmpty' => array(
@@ -71,11 +79,16 @@ public $actsAs = array(
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-			'unique' =>array(
+				'unique' =>array(
 				'rule' => array('isUnique'),
 				'message' => 'ya se encuentra en la base de datos',
 				
 				),
+		
+			'numeric' => array(
+				'rule' => array('numeric'),
+				'message' => 'solo se aceptan digitos',
+				)
 		),
 		'direccion' => array(
 			'notEmpty' => array(
@@ -96,6 +109,10 @@ public $actsAs = array(
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+			'normaltext' => array(
+				'rule' => array('custom','/^[[:alpha:]](\s*[[:alpha:]]*)*$/i'),
+				'message' => 'la ocupacion debería contener sólo letras'
+				),
 		),
 		'culpabilidad' => array(
 			'boolean' => array(
@@ -106,6 +123,7 @@ public $actsAs = array(
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+		
 		),
 		'capacidadPago' => array(
 			'boolean' => array(
@@ -126,7 +144,8 @@ public $actsAs = array(
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-		),
+		
+        ),
 		
 		'foto' => array(
         	'uploadError' => array(

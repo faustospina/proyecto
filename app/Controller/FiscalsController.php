@@ -46,7 +46,7 @@ class FiscalsController extends AppController {
  */
 	public function view($id = null) {
 		if (!$this->Fiscal->exists($id)) {
-			throw new NotFoundException(__('Invalid fiscal'));
+			throw new NotFoundException(__('no existe este fiscal'));
 		}
 		$options = array('conditions' => array('Fiscal.' . $this->Fiscal->primaryKey => $id));
 		$this->set('fiscal', $this->Fiscal->find('first', $options));
@@ -61,10 +61,10 @@ class FiscalsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Fiscal->create();
 			if ($this->Fiscal->save($this->request->data)) {
-				$this->Session->setFlash(__('The fiscal has been saved.'));
-				return $this->redirect(array('action' => 'index'));
+				$this->Session->setFlash('se ha agregado el fiscal satisfactoriamente', 'default', array('class' => 'alert alert-success'));
+				return $this->redirect(array('controller'=>'pages','action'=>'home'));
 			} else {
-				$this->Session->setFlash(__('The fiscal could not be saved. Please, try again.'));
+				$this->Session->setFlash('no se ha podido guardar', 'default', array('class' => 'alert alert-danger'));
 			}
 		}
 		$audiencias = $this->Fiscal->Audiencia->find('list');
@@ -81,14 +81,14 @@ class FiscalsController extends AppController {
  */
 	public function edit($id = null) {
 		if (!$this->Fiscal->exists($id)) {
-			throw new NotFoundException(__('Invalid fiscal'));
+			throw new NotFoundException(__(' fiscal Invalido'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Fiscal->save($this->request->data)) {
-				$this->Session->setFlash(__('The fiscal has been saved.'));
+				$this->Session->setFlash(__('el fiscal ha sido editado.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The fiscal could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('fiscal no se guardo.inténtelo de nuevo.'));
 			}
 		} else {
 			$options = array('conditions' => array('Fiscal.' . $this->Fiscal->primaryKey => $id));

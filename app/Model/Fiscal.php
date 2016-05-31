@@ -30,6 +30,10 @@ class Fiscal extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+		'normaltext' => array(
+				'rule' => array('custom','/^[[:alpha:]](\s*[[:alpha:]]*)*$/i'),
+				'message' => 'El nombre debería contener sólo letras'
+				)
 		),
 		'apellidos' => array(
 			'notEmpty' => array(
@@ -40,6 +44,10 @@ class Fiscal extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+		'normaltext' => array(
+				'rule' => array('custom','/^[[:alpha:]](\s*[[:alpha:]]*)*$/i'),
+				'message' => 'los apellidos deberían contener sólo letras'
+				)
 		),
 		'codigoRepresentativo' => array(
 			'notEmpty' => array(

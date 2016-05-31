@@ -69,7 +69,7 @@ class EventsController extends AppController {
  */
 	public function view($id = null) {
 		if (!$this->Event->exists($id)) {
-			throw new NotFoundException(__('Invalid event'));
+			throw new NotFoundException(__('evento invalido'));
 		}
 		$options = array('conditions' => array('Event.' . $this->Event->primaryKey => $id));
 		$this->set('event', $this->Event->find('first', $options));
@@ -93,14 +93,14 @@ class EventsController extends AppController {
 
 			$this->Event->create();
 			if ($this->Event->save($this->request->data)) {
-				$this->Session->setFlash(__('The event has been saved.'));
+				$this->Session->setFlash(__('el event ha sido guardado.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The event could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('el event no se guardo. inténtelo de nuevo.'));
 			}
 		
 		$mensaje["status"] = 1;
-        $mensaje["mensaje"] = "El registro no ha podido ser creado. Por favor intÃ©ntelo de nuevo.";
+        $mensaje["mensaje"] = "El registro no ha podido ser creado. Por favor inténtelo de nuevo.";
         echo son_encode($mensaje) ;
 
 		$this -> render('empty');
@@ -116,14 +116,14 @@ class EventsController extends AppController {
  */
 	public function edit($id = null) {
 		if (!$this->Event->exists($id)) {
-			throw new NotFoundException(__('Invalid event'));
+			throw new NotFoundException(__('el evento no existe'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Event->save($this->request->data)) {
-				$this->Session->setFlash(__('The event has been saved.'));
+				$this->Session->setFlash(__('evento guardado.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The event could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('el evento no se guardo. inténtelo de nuevo.'));
 			}
 		} else {
 			$options = array('conditions' => array('Event.' . $this->Event->primaryKey => $id));
@@ -144,13 +144,13 @@ class EventsController extends AppController {
 	public function delete($id = null) {
 		$this->Event->id = $id;
 		if (!$this->Event->exists()) {
-			throw new NotFoundException(__('Invalid event'));
+			throw new NotFoundException(__('el evento no existe'));
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->Event->delete()) {
-			$this->Session->setFlash(__('The event has been deleted.'));
+			$this->Session->setFlash(__(' el evento ha sido eliminado.'));
 		} else {
-			$this->Session->setFlash(__('The event could not be deleted. Please, try again.'));
+			$this->Session->setFlash(__('el evento no fue eliminado. inténtelo de nuevo.'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}

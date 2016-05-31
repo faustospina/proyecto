@@ -30,6 +30,10 @@ class User extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+			'normaltext' => array(
+				'rule' => array('custom','/^[[:alpha:]](\s*[[:alpha:]]*)*$/i'),
+				'message' => 'El nombre debería contener sólo letras'
+				),
 		),
 		'apellidos' => array(
 			'notEmpty' => array(
@@ -40,6 +44,10 @@ class User extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+			'normaltext' => array(
+				'rule' => array('custom','/^[[:alpha:]](\s*[[:alpha:]]*)*$/i'),
+				'message' => 'los apellidos debería contener sólo letras'
+				),
 		),
 		'celular' => array(
 			'notEmpty' => array(
@@ -73,6 +81,12 @@ class User extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+			'email' => array(
+				'rule' => 'email',
+				'message' => 'debe ser una dirección de email válida.'
+				),
+			
+			
 		),
 		'username' => array(
 			'notEmpty' => array(
@@ -83,6 +97,10 @@ class User extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+			'normaltext' => array(
+				'rule' => array('custom','/^[[:alpha:]](\s*[[:alpha:]]*)*$/i'),
+				'message' => 'El nombre de usuario debería contener sólo letras'
+				)
 		),
 		'password' => array(
 			'notEmpty' => array(
@@ -103,6 +121,10 @@ class User extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+			'normaltext' => array(
+				'rule' => array('custom','/^[[:alpha:]](\s*[[:alpha:]]*)*$/i'),
+				'message' => 'El titulo profesional debería contener sólo letras'
+				)
 		),
 		'roll' => array(
 			'notEmpty' => array(

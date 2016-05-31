@@ -9,11 +9,11 @@
 	 <thead>
 		<tr>
 			<th><?php echo __('Id'); ?></th>
-			<th><?php echo __('NombreDelito'); ?></th>
-			<th><?php echo __('NombreVariacionDelito'); ?></th>
+			<th><?php echo __('Nombre de delito'); ?></th>
+			<th><?php echo __('Nombre variacion delito'); ?></th>
 			<th><?php echo __('Descripcion'); ?></th>
-			<th><?php echo __('NumeroRadicado'); ?></th>
-			<th><?php echo __('NumeroProceso'); ?></th>
+			<th><?php echo __('Numero radicado'); ?></th>
+			<th><?php echo __('Numero del proceso'); ?></th>
 			<th><?php echo __('Estado'); ?></th>
 			<th><?php echo __('Acusado'); ?></th>
 		</tr>
@@ -47,7 +47,7 @@
 		<th><?php echo __('Id'); ?></th>
 		<th><?php echo __('Nombre'); ?></th>
 		<th><?php echo __('Apellidos'); ?></th>
-		<th><?php echo __('CodigoRepresentativo'); ?></th>
+		<th><?php echo __('Codigo Representativo'); ?></th>
 		<th><?php echo __('Audiencia Id'); ?></th>
 		<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
@@ -89,7 +89,7 @@
 		<th><?php echo __('Id'); ?></th>
 		<th><?php echo __('Nombre'); ?></th>
 		<th><?php echo __('Apellidos'); ?></th>
-		<th><?php echo __('CodigoRepresentativo'); ?></th>
+		<th><?php echo __('Codigo representativo'); ?></th>
 		<th><?php echo __('Descripcion'); ?></th>
 		<th><?php echo __('Audiencia Id'); ?></th>
 		<th class="actions"><?php echo __('Actions'); ?></th>
@@ -130,16 +130,16 @@
 	<?php echo __('Opciones'); ?><span class="caret"></span>
 		</button>
 	<ul class="dropdown-menu" role="menu">
-		<li><?php echo $this->Html->link(__('Edit Proceso'), array('action' => 'edit', $proceso['Proceso']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Proceso'), array('action' => 'delete', $proceso['Proceso']['id']), array(), __('Are you sure you want to delete # %s?', $proceso['Proceso']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Procesos'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Proceso'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Acusados'), array('controller' => 'acusados', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Acusado'), array('controller' => 'acusados', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Fiscals'), array('controller' => 'fiscals', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Fiscal'), array('controller' => 'fiscals', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Juezs'), array('controller' => 'juezs', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Juez'), array('controller' => 'juezs', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Editar Proceso'), array('action' => 'edit', $proceso['Proceso']['id'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('eliminar Proceso'), array('action' => 'delete', $proceso['Proceso']['id']), array(), __('Are you sure you want to delete # %s?', $proceso['Proceso']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de procesos'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo Proceso'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de acusados'), array('controller' => 'acusados', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo acusado'), array('controller' => 'acusados', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de Fiscales'), array('controller' => 'fiscals', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo fiscal'), array('controller' => 'fiscals', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de Jueces'), array('controller' => 'juezs', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo Juez'), array('controller' => 'juezs', 'action' => 'add')); ?> </li>
 	</ul>
 
 

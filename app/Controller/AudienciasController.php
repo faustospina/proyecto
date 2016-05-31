@@ -32,9 +32,7 @@ class AudienciasController extends AppController {
 		$this->Audiencia->recursive = 0;
 
 		$this->paginate['Audiencia']['limit'] = 3;
-		//$this->paginate['Mesero']['conditions'] = array('Mesero.dni' => "34343");
 		$this->paginate['Audiencia']['order'] = array('Audiencia.id' => 'asc');
- 		//$this->Paginator->settings = $this->paginate;
 		$this->set('audiencias', $this->paginate());
 	}
 
@@ -47,7 +45,7 @@ class AudienciasController extends AppController {
  */
 	public function view($id = null) {
 		if (!$this->Audiencia->exists($id)) {
-			throw new NotFoundException(__('Invalid audiencia'));
+			throw new NotFoundException(__('audiencia invalidad'));
 		}
 		$options = array('conditions' => array('Audiencia.' . $this->Audiencia->primaryKey => $id));
 		$this->set('audiencia', $this->Audiencia->find('first', $options));
@@ -62,10 +60,10 @@ class AudienciasController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Audiencia->create();
 			if ($this->Audiencia->save($this->request->data)) {
-				$this->Session->setFlash(__('The audiencia has been saved.'));
-				return $this->redirect(array('action' => 'index'));
+				$this->Session->setFlash(__(' audiencia guardada.'));
+				return $this->redirect(array('controller'=>'pages','action'=>'home'));
 			} else {
-				$this->Session->setFlash(__('The audiencia could not be saved. Please, try again.'));
+				$this->Session->setFlash('no se ha podido guardar', 'default', array('class' => 'alert alert-danger'));
 			}
 		}
 	}
@@ -79,7 +77,7 @@ class AudienciasController extends AppController {
  */
 	public function edit($id = null) {
 		if (!$this->Audiencia->exists($id)) {
-			throw new NotFoundException(__('Invalid audiencia'));
+			throw new NotFoundException(__('no es correcta esta audiencia'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Audiencia->save($this->request->data)) {
@@ -104,13 +102,13 @@ class AudienciasController extends AppController {
 	public function delete($id = null) {
 		$this->Audiencia->id = $id;
 		if (!$this->Audiencia->exists()) {
-			throw new NotFoundException(__('Invalid audiencia'));
+			throw new NotFoundException(__('la audiencia no existe'));
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->Audiencia->delete()) {
-			$this->Session->setFlash(__('The audiencia has been deleted.'));
+			$this->Session->setFlash(__('la audiencia fue eliminada.'));
 		} else {
-			$this->Session->setFlash(__('The audiencia could not be deleted. Please, try again.'));
+			$this->Session->setFlash(__('no se pudo eliminar.inténtelo de nuevo.'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}

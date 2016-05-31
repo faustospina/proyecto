@@ -1,5 +1,6 @@
 <?php
 App::uses('AppController', 'Controller');
+
 /**
  * Acusados Controller
  *
@@ -46,7 +47,7 @@ class AcusadosController extends AppController {
  */
 	public function view($id = null) {
 		if (!$this->Acusado->exists($id)) {
-			throw new NotFoundException(__('Invalid acusado'));
+			throw new NotFoundException(__('este acusado es invalido'));
 		}
 		$options = array('conditions' => array('Acusado.' . $this->Acusado->primaryKey => $id));
 		$this->set('acusado', $this->Acusado->find('first', $options));
@@ -62,7 +63,7 @@ class AcusadosController extends AppController {
 			$this->Acusado->create();
 			if ($this->Acusado->save($this->request->data)) {
 				$this->Session->setFlash('el acusado se ha guardado con exito', 'default', array('class' => 'alert alert-success'));
-				return $this->redirect(array('controller'=>'procesos','action'=>'add'));
+				return $this->redirect(array('controller'=>'pages','action'=>'home'));
 			} else {
 				$this->Session->setFlash('no se pudo completar el resgistro', 'default', array('class' => 'alert alert-danger'));
 			}
@@ -82,7 +83,7 @@ class AcusadosController extends AppController {
  */
 	public function edit($id = null) {
 		if (!$this->Acusado->exists($id)) {
-			throw new NotFoundException(__('Invalid acusado'));
+			throw new NotFoundException(__('no se puede editar este acusado'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Acusado->save($this->request->data)) {
@@ -111,7 +112,7 @@ class AcusadosController extends AppController {
 	public function delete($id = null) {
 		$this->Acusado->id = $id;
 		if (!$this->Acusado->exists()) {
-			throw new NotFoundException(__('Invalid acusado'));
+			throw new NotFoundException(__('este acuudado no existe'));
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->Acusado->delete()) {

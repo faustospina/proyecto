@@ -38,11 +38,11 @@
 	<ul class="dropdown-menu" role="menu">
 
 		<li><?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $this->Form->value('Acusado.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('Acusado.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('Lista de Acusados'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('Lista de Ciudades'), array('controller' => 'ciudads', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nueva Ciudad'), array('controller' => 'ciudads', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Lista de Audiencias'), array('controller' => 'audiencias', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nueva Audiencia'), array('controller' => 'audiencias', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de acusados'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('Lista de ciudades'), array('controller' => 'ciudads', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nueva ciudad'), array('controller' => 'ciudads', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de audiencias'), array('controller' => 'audiencias', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nueva audiencia'), array('controller' => 'audiencias', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('Lista de procesos'), array('controller' => 'procesos', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Nuevo Proceso'), array('controller' => 'procesos', 'action' => 'add')); ?> </li>
 	</ul>

@@ -14,7 +14,7 @@
 		echo $this->Form->input('direccion',array('class' => 'form-control', 'label' => 'Direccion'));
 		echo $this->Form->input('ocupacion',array('class' => 'form-control', 'label' => 'Ocupacion'));
 		echo $this->Form->input('culpabilidad');
-		echo $this->Form->input('capacidadPago');
+		echo $this->Form->input('capacidad de Pago');
 		echo $this->Form->input('sentencia',array('class' => 'form-control', 'label' => 'Sentencia'));
 		echo $this->Form->input('foto', array('type' => 'file', 'label' => 'Foto', 'id' => 'foto', 'class' => 'file', 'data-show-upload' => 'false', 'data-show-caption' => 'true'));
 		echo $this->Form->input('foto_dir', array('type'=>'hidden'));
@@ -35,12 +35,12 @@
 </button>
 	<ul class="dropdown-menu" role="menu">
 
-		<li><?php echo $this->Html->link(__('Lista de Acusados'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('Lista de Ciudades'), array('controller' => 'ciudads', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nueva Ciudad'), array('controller' => 'ciudads', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Lista de Audiencias'), array('controller' => 'audiencias', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nueva Audiencia'), array('controller' => 'audiencias', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Lista Procesos'), array('controller' => 'procesos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de acusados'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('Lista de ciudades'), array('controller' => 'ciudads', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nueva ciudad'), array('controller' => 'ciudads', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de audiencias'), array('controller' => 'audiencias', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nueva audiencia'), array('controller' => 'audiencias', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de procesos'), array('controller' => 'procesos', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Nuevo Proceso'), array('controller' => 'procesos', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

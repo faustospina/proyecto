@@ -31,6 +31,11 @@ class Proceso extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+		'normaltext' => array(
+				'rule' => array('custom','/^[[:alpha:]](\s*[[:alpha:]]*)*$/i'),
+				'message' => 'el nombre del delito debería contener sólo letras'
+				),
+		
 		),
 		'nombreVariacionDelito' => array(
 			'notEmpty' => array(
@@ -41,6 +46,10 @@ class Proceso extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+		'normaltext' => array(
+				'rule' => array('custom','/^[[:alpha:]](\s*[[:alpha:]]*)*$/i'),
+				'message' => 'el nombre de la variacion del delito debería contener sólo letras'
+				),
 		),
 		'descripcion' => array(
 			'notEmpty' => array(
@@ -51,6 +60,10 @@ class Proceso extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+		'normaltext' => array(
+				'rule' => array('custom','/^[[:alpha:]](\s*[[:alpha:]]*)*$/i'),
+				'message' => 'la descripcion debería contener sólo letras'
+				),
 		),
 		'numeroRadicado' => array(
 			'notEmpty' => array(
@@ -66,6 +79,10 @@ class Proceso extends AppModel {
 				'message' => 'ya se encuentra en la base de datos',
 				
 				),
+			  'between' => array(
+                'rule' => array('lengthBetween', 21, 21),
+                'message' => '21 digitos exactos'
+            )
 		),
 		'numeroProceso' => array(
 			'notEmpty' => array(
@@ -76,6 +93,19 @@ class Proceso extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+			'unique' =>array(
+				'rule' => array('isUnique'),
+				'message' => 'ya se encuentra en la base de datos',
+				
+				),
 		),
 		'estado' => array(
 			'notEmpty' => array(
@@ -86,6 +116,10 @@ class Proceso extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+		'normaltext' => array(
+				'rule' => array('custom','/^[[:alpha:]](\s*[[:alpha:]]*)*$/i'),
+				'message' => 'el estado debería contener sólo letras'
+				),
 		),
 	);
 
@@ -124,6 +158,7 @@ class Proceso extends AppModel {
 			'limit' => '',
 			'offset' => '',
 			'finderQuery' => '',
+		
 		),
 		'Juez' => array(
 			'className' => 'Juez',

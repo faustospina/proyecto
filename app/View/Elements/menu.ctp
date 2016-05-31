@@ -42,17 +42,14 @@
       <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Listas de involucrados<span class="caret"></span></a>
               <ul class="dropdown-menu">
+                <li><?php echo $this->Html->link('Lista de ciudades', array('controller'=>'ciudads','action'=>'index'))  ?> </li>
+                <li><?php echo $this->Html->link('lista de Audiencias', array('controller'=>'audiencias','action'=>'index'))  ?> </li>
                 <li><?php echo $this->Html->link('Lista de jueces', array('controller'=>'juezs','action'=>'index'))  ?> </li>
                 <li><?php echo $this->Html->link('Lista de fiscales', array('controller'=>'fiscals','action'=>'index'))  ?> </li>
-                <li><?php echo $this->Html->link('Lista de ciudades', array('controller'=>'ciudads','action'=>'index'))  ?> </li>
-                <li><?php echo $this->Html->link('Lista de carceles', array('controller'=>'carcels','action'=>'index'))  ?> </li>
-                <li><?php echo $this->Html->link('lista de Audiencias', array('controller'=>'audiencias','action'=>'index'))  ?> </li>
                 <li><?php echo $this->Html->link('Lista de acusados', array('controller'=>'acusados','action'=>'index'))  ?> </li>
                 <li><?php echo $this->Html->link('Lista de procesos penales', array('controller'=>'procesos','action'=>'index'))  ?> </li>
-               <li><?php echo $this->Html->link('Lista de procesos asociados a un fiscal', array('controller'=>'fiscalsProcesos','action'=>'index'))  ?> </li>
-                <li><?php echo $this->Html->link('Lista de procesos asociados a un juez', array('controller'=>'juezsProcesos','action'=>'index'))  ?> </li>
-        
-              </ul>
+                <li><?php echo $this->Html->link('Lista de carceles', array('controller'=>'carcels','action'=>'index'))  ?> </li>
+               </ul>
     
        </li>
        

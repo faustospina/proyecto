@@ -45,7 +45,7 @@ class CarcelsController extends AppController {
  */
 	public function view($id = null) {
 		if (!$this->Carcel->exists($id)) {
-			throw new NotFoundException(__('Invalid carcel'));
+			throw new NotFoundException(__('la carcel es invalidad'));
 		}
 		$options = array('conditions' => array('Carcel.' . $this->Carcel->primaryKey => $id));
 		$this->set('carcel', $this->Carcel->find('first', $options));
@@ -60,10 +60,10 @@ class CarcelsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Carcel->create();
 			if ($this->Carcel->save($this->request->data)) {
-				$this->Session->setFlash(__('The carcel has been saved.'));
-				return $this->redirect(array('action' => 'index'));
+				$this->Session->setFlash(__('la carcel ha sido guadada.'));
+				return $this->redirect(array('controller'=>'pages','action'=>'home'));
 			} else {
-				$this->Session->setFlash(__('The carcel could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('no se pudo guardar la carcel. inténtelo de nuevo.'));
 			}
 		}
 		$ciudads = $this->Carcel->Ciudad->find('list');
@@ -80,14 +80,14 @@ class CarcelsController extends AppController {
  */
 	public function edit($id = null) {
 		if (!$this->Carcel->exists($id)) {
-			throw new NotFoundException(__('Invalid carcel'));
+			throw new NotFoundException(__('esta carcel no existe'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Carcel->save($this->request->data)) {
-				$this->Session->setFlash(__('The carcel has been saved.'));
+				$this->Session->setFlash(__('carcel se ha guardado.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The carcel could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('no se guardo la carcel. inténtelo de nuevo.'));
 			}
 		} else {
 			$options = array('conditions' => array('Carcel.' . $this->Carcel->primaryKey => $id));
@@ -108,13 +108,13 @@ class CarcelsController extends AppController {
 	public function delete($id = null) {
 		$this->Carcel->id = $id;
 		if (!$this->Carcel->exists()) {
-			throw new NotFoundException(__('Invalid carcel'));
+			throw new NotFoundException(__('no es posible eliminar la carcel ya que no existe'));
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->Carcel->delete()) {
-			$this->Session->setFlash(__('The carcel has been deleted.'));
+			$this->Session->setFlash(__('la carcel ha sido eliminada.'));
 		} else {
-			$this->Session->setFlash(__('The carcel could not be deleted. Please, try again.'));
+			$this->Session->setFlash(__('no se pudo eliminar la carcel. inténtelo de nuevo.'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}

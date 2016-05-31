@@ -16,13 +16,9 @@
 			<th><?php echo $this->Paginator->sort('celular'); ?></th>
 			<th><?php echo $this->Paginator->sort('correo'); ?></th>
 			<th><?php echo $this->Paginator->sort('usuario'); ?></th>
-			<th><?php echo $this->Paginator->sort('Creado'); ?></th>
-			<th><?php echo $this->Paginator->sort('Modificado'); ?></th>
-
-
-			<th><?php echo $this->Paginator->sort('Fecha Creado'); ?></th>
-			<th><?php echo $this->Paginator->sort('Fecha Modificado'); ?></th>
-			<th><?php echo $this->Paginator->sort('TituloProfesional'); ?></th>
+			<th><?php echo $this->Paginator->sort('fecha de Creacion'); ?></th>
+			<th><?php echo $this->Paginator->sort('Fecha de Modificado'); ?></th>
+			<th><?php echo $this->Paginator->sort('Titulo Profesional'); ?></th>
 			<th><?php echo $this->Paginator->sort('Rol'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
@@ -55,7 +51,7 @@
 		<p>
 		<?php
 		echo $this->Paginator->counter(array(
-		'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+		'format' => __('página {:page} de {:pages}, {:current} elémentos de {:count} en total, inicia en {:start}, termina en {:end}')
 		));
 		?>	</p>
 		<ul class="pagination">

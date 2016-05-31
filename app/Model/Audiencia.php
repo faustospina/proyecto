@@ -32,10 +32,14 @@ class Audiencia extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-		'unique' =>array(
+	    	'unique' =>array(
 				'rule' => array('isUnique'),
 				'message' => 'ya se encuentra en la base de datos',
 				
+				),
+			'normaltext' => array(
+				'rule' => array('custom','/^[[:alpha:]](\s*[[:alpha:]]*)*$/i'),
+				'message' => 'el nombre debería contener sólo letras'
 				),
 		),
 		'nroSala' => array(
@@ -49,7 +53,7 @@ class Audiencia extends AppModel {
 			),
 			'numeric' => array(
 				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
+				'message' => 'solo se aceptan digitos',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -65,6 +69,10 @@ class Audiencia extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
+			'normaltext' => array(
+				'rule' => array('custom','/^[[:alpha:]](\s*[[:alpha:]]*)*$/i'),
+				'message' => 'la ocupacion debería contener sólo letras'
+				),
 		),
 		'detenido' => array(
 			'boolean' => array(

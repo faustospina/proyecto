@@ -11,11 +11,11 @@
 	<thead>
 	<tr>
 		
-			<th><?php echo $this->Paginator->sort('nombreDelito'); ?></th>
-			<th><?php echo $this->Paginator->sort('nombreVariacionDelito'); ?></th>
+			<th><?php echo $this->Paginator->sort('nombre del delito'); ?></th>
+			<th><?php echo $this->Paginator->sort('nombre Variacion del delito'); ?></th>
 			<th><?php echo $this->Paginator->sort('descripcion'); ?></th>
-			<th><?php echo $this->Paginator->sort('numeroRadicado'); ?></th>
-			<th><?php echo $this->Paginator->sort('numeroProceso'); ?></th>
+			<th><?php echo $this->Paginator->sort('numero de Radicado (21 digitos exactos)'); ?></th>
+			<th><?php echo $this->Paginator->sort('numero del Proceso'); ?></th>
 			<th><?php echo $this->Paginator->sort('estado'); ?></th>
 			<th><?php echo $this->Paginator->sort('acusado_id'); ?></th>
 			<th class="actions"><?php echo __('Opciones'); ?></th>
@@ -48,7 +48,7 @@
 		<p>
 		<?php
 		echo $this->Paginator->counter(array(
-		'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+		'format' => __('página {:page} de {:pages}, {:current} elémentos de {:count} en total, inicia en {:start}, termina en {:end}')
 		));
 		?>	</p>
 		<ul class="pagination">

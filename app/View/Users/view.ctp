@@ -1,8 +1,4 @@
-<br />
-<br />
-<br />
-<br />	
-<br />
+
 <div class="page-header">
 <h2><?php echo __('Usuario'); ?></h2>
 </div>
@@ -21,7 +17,7 @@
 	
 		<th><?php echo __('Creado'); ?></th>
 		<th><?php echo __('Modificado'); ?></th>
-		<th><?php echo __('TituloProfesional'); ?></th>
+		<th><?php echo __('Titulo Profesional'); ?></th>
 		<th><?php echo __('Rol'); ?></th>
 	</tr>
 	</thead>
@@ -50,14 +46,14 @@
 	<table class="table table-striped">
 	<tr>
 		
-		<th><?php echo __('Creado'); ?></th>
+		<th><?php echo __('fecha de arresto'); ?></th>
 		<th><?php echo __('Nombre'); ?></th>
 		<th><?php echo __('Apellidos'); ?></th>
 		<th><?php echo __('Direccion'); ?></th>
 		<th><?php echo __('Ocupacion'); ?></th>
 		<th><?php echo __('Culpabilidad'); ?></th>
-		<th><?php echo __('CapacidadPago'); ?></th>
-		<th><?php echo __('Modified'); ?></th>
+		<th><?php echo __('Capacidad de Pago'); ?></th>
+		<th><?php echo __('fecha de modificación'); ?></th>
 		<th><?php echo __('Sentencia'); ?></th>
 		
 		<th class="actions"><?php echo __('Opciones'); ?></th>
@@ -103,10 +99,10 @@
 	<ul class="dropdown-menu" role="menu">
 		<li><?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $user['User']['id'])); ?> </li>
 		<li><?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $user['User']['id']), array(), __('Are you sure you want to delete # %s?', $user['User']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('Lista Usuarios'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nuevo Usuario'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Lista Acusados'), array('controller' => 'acusados', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nuevo Acusado'), array('controller' => 'acusados', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de usuarios'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo usuario'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de acusados'), array('controller' => 'acusados', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo acusado'), array('controller' => 'acusados', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
 </div>

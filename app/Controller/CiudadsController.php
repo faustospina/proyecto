@@ -45,7 +45,7 @@ class CiudadsController extends AppController {
  */
 	public function view($id = null) {
 		if (!$this->Ciudad->exists($id)) {
-			throw new NotFoundException(__('Invalid ciudad'));
+			throw new NotFoundException(__('la ciudad no existe'));
 		}
 		$options = array('conditions' => array('Ciudad.' . $this->Ciudad->primaryKey => $id));
 		$this->set('ciudad', $this->Ciudad->find('first', $options));
@@ -60,10 +60,10 @@ class CiudadsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Ciudad->create();
 			if ($this->Ciudad->save($this->request->data)) {
-				$this->Session->setFlash(__('The ciudad has been saved.'));
-				return $this->redirect(array('action' => 'index'));
+				$this->Session->setFlash(__('la ciudad fue guardada.'));
+				return $this->redirect(array('controller'=>'pages','action'=>'home'));
 			} else {
-				$this->Session->setFlash(__('The ciudad could not be saved. Please, try again.'));
+				$this->Session->setFlash('no se pudo completar el registro', 'default', array('class' => 'alert alert-danger'));
 			}
 		}
 	}
@@ -77,14 +77,14 @@ class CiudadsController extends AppController {
  */
 	public function edit($id = null) {
 		if (!$this->Ciudad->exists($id)) {
-			throw new NotFoundException(__('Invalid ciudad'));
+			throw new NotFoundException(__('ciudad invalidad'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Ciudad->save($this->request->data)) {
-				$this->Session->setFlash(__('The ciudad has been saved.'));
+				$this->Session->setFlash(__('la ciudad ha sido guardada.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The ciudad could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('la ciudad no se guardo.inténtelo de nuevo.'));
 			}
 		} else {
 			$options = array('conditions' => array('Ciudad.' . $this->Ciudad->primaryKey => $id));
@@ -102,13 +102,13 @@ class CiudadsController extends AppController {
 	public function delete($id = null) {
 		$this->Ciudad->id = $id;
 		if (!$this->Ciudad->exists()) {
-			throw new NotFoundException(__('Invalid ciudad'));
+			throw new NotFoundException(__('ciudad no existe'));
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->Ciudad->delete()) {
-			$this->Session->setFlash(__('The ciudad has been deleted.'));
+			$this->Session->setFlash(__('la ciudad ha sido eliminada.'));
 		} else {
-			$this->Session->setFlash(__('The ciudad could not be deleted. Please, try again.'));
+			$this->Session->setFlash(__('a ciudad no se elimino.inténtelo de nuevo.'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}

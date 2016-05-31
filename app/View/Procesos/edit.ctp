@@ -9,7 +9,7 @@
 		echo $this->Form->input('nombreDelito', array('class' => 'form-control', 'label' => 'Nombre del delito'));
 		echo $this->Form->input('nombreVariacionDelito', array('class' => 'form-control', 'label' => 'Nombre variacion del delito'));
 		echo $this->Form->input('descripcion', array('class' => 'form-control', 'label' => 'Descripcion'));
-		echo $this->Form->input('numeroRadicado', array('class' => 'form-control', 'label' => 'numero del radicado asignado al caso'));
+		echo $this->Form->input('numeroRadicado', array('class' => 'form-control', 'label' => 'numero del radicado asignado al caso de 21 digitos'));
 		echo $this->Form->input('numeroProceso', array('class' => 'form-control', 'label' => 'numero del proceso'));
 		echo $this->Form->input('estado', array('class' => 'form-control', 'label' => 'estado en que el acosado delinquio'));
 		echo $this->Form->input('acusado_id');
@@ -28,14 +28,14 @@
 		 </button>
 	<ul class="dropdown-menu" role="menu">
 
-		<li><?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $this->Form->value('Proceso.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('Proceso.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('Lista de Procesos'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('Lista de Acusados'), array('controller' => 'acusados', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nuevo Acusado'), array('controller' => 'acusados', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Lista de Fiscales'), array('controller' => 'fiscals', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nuevo Fiscal'), array('controller' => 'fiscals', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Lista de Juezes'), array('controller' => 'juezs', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nuevo Juez'), array('controller' => 'juezs', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Form->postLink(__('eliminar'), array('action' => 'delete', $this->Form->value('Proceso.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('Proceso.id'))); ?></li>
+		<li><?php echo $this->Html->link(__('Lista de procesos'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('Lista de acusados'), array('controller' => 'acusados', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo acusado'), array('controller' => 'acusados', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de fiscales'), array('controller' => 'fiscals', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo fiscal'), array('controller' => 'fiscals', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de jueces'), array('controller' => 'juezs', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo juez'), array('controller' => 'juezs', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
 </div>

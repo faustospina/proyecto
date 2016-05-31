@@ -12,7 +12,7 @@
 		
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
 			<th><?php echo $this->Paginator->sort('apellidos'); ?></th>
-			<th><?php echo $this->Paginator->sort('codigoRepresentativo'); ?></th>
+			<th><?php echo $this->Paginator->sort('codigo Representativo'); ?></th>
 			<th><?php echo $this->Paginator->sort('audiencia_id'); ?></th>
 			<th class="actions"><?php echo __('Opciones'); ?></th>
 	</tr>
@@ -42,7 +42,7 @@
 		<p>
 		<?php
 		echo $this->Paginator->counter(array(
-		'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+		'format' => __('página {:page} de {:pages}, {:current} elémentos de {:count} en total, inicia en {:start}, termina en {:end}')
 		));
 		?>	</p>
 		<ul class="pagination">

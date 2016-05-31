@@ -17,8 +17,8 @@
 	
 		<th><?php echo __('fecha de Creacion'); ?></th>
 		<th><?php echo __('Nombre'); ?></th>
-		<th><?php echo __('NumeroPatios'); ?></th>
-		<th><?php echo __('NumeroCelda'); ?></th>
+		<th><?php echo __('Numero de patios'); ?></th>
+		<th><?php echo __('Numero de celda'); ?></th>
 		<th><?php echo __('fecha de modificacion'); ?></th>
 		<th><?php echo __('FechaVisita'); ?></th>
 		<th><?php echo __('Ciudad'); ?></th>
@@ -46,14 +46,14 @@
 	<?php echo __('Opciones'); ?><span class="caret"></span>
 	</button>
 	<ul class="dropdown-menu" role="menu">
-		<li><?php echo $this->Html->link(__('Editar Carcel'), array('action' => 'edit', $carcel['Carcel']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(__('Editar carcel'), array('action' => 'edit', $carcel['Carcel']['id'])); ?> </li>
 		<li><?php echo $this->Form->postLink(__('Eliminar Carcel'), array('action' => 'delete', $carcel['Carcel']['id']), array(), __('Are you sure you want to delete # %s?', $carcel['Carcel']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('Lista de Carceles'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nueva Carcel'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Lista de Ciudads'), array('controller' => 'ciudads', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nueva Ciudad'), array('controller' => 'ciudads', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Lista de Audiencias'), array('controller' => 'audiencias', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nueva Audiencia'), array('controller' => 'audiencias', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de carceles'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nueva carcel'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de ciudades'), array('controller' => 'ciudads', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nueva ciudad'), array('controller' => 'ciudads', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de audiencias'), array('controller' => 'audiencias', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nueva audiencia'), array('controller' => 'audiencias', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
 </div>

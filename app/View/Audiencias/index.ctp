@@ -10,9 +10,9 @@
 	<tr>
 		
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
-			<th><?php echo $this->Paginator->sort('nroSala'); ?></th>
-			<th><?php echo $this->Paginator->sort('created'); ?></th>
-			<th><?php echo $this->Paginator->sort('MinPublico'); ?></th>
+			<th><?php echo $this->Paginator->sort('numero de sala'); ?></th>
+			<th><?php echo $this->Paginator->sort('fecha de creacion'); ?></th>
+			<th><?php echo $this->Paginator->sort('Ministro Publico'); ?></th>
 			<th><?php echo $this->Paginator->sort('detenido'); ?></th>
 			<th><?php echo $this->Paginator->sort('descripcion'); ?></th>
 			<th class="actions"><?php echo __('Opciones'); ?></th>
@@ -42,7 +42,7 @@
 		<p>
 		<?php
 		echo $this->Paginator->counter(array(
-		'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+		'format' => __('página {:page} de {:pages}, {:current} elémentos de {:count} en total, inicia en {:start}, termina en {:end}')
 		));
 		?>	</p>
 		<ul class="pagination">

@@ -35,6 +35,10 @@ class Carcel extends AppModel {
 				'message' => 'ya se encuentra en la base de datos',
 				
 				),
+			'normaltext' => array(
+				'rule' => array('custom','/^[[:alpha:]](\s*[[:alpha:]]*)*$/i'),
+				'message' => 'el nombre debería contener sólo letras'
+				),
 		),
 		'numeroPatios' => array(
 			'notEmpty' => array(
@@ -47,7 +51,7 @@ class Carcel extends AppModel {
 			),
 			'numeric' => array(
 				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
+				'message' => 'solo se aceptan digitos',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -65,7 +69,7 @@ class Carcel extends AppModel {
 			),
 			'numeric' => array(
 				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
+				'message' => 'solo se aceptan digitos',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule

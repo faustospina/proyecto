@@ -29,9 +29,9 @@
     <div class="jumbotron">
       <div class="container">
         <h1>Bienvenid@s...</h1>
-        <p>Le proponemos vivir de una manera organizada y totalmente sincronica
-        el proceso que se da un consultorio juridico para que tenga en cuenta todo
-        lo relacionado con sus acusados y los atributos que lo relaciona</p>
+        <p>Le proponemos vivir de una manera organizada y totalmente sincrónica  
+        el proceso que se da un consultorio jurídico para que tenga en cuenta todo 
+        lo relacionado con sus acusados y los atributos que lo relaciona.</p>
      
       </div>
     </div>
@@ -40,18 +40,18 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4">
-          <h2>Menús optimos para el despliegue de la aplicacion</h2>
-          <p>Disponemos de menús optimos para la devida planificacion del proceso </p>
+          <h2>Menús óptimos para el despliegue de la aplicación</h2>
+          <p>Disponemos de menús optimos para la devida planificación del proceso. </p>
     
         </div>
         <div class="col-md-4">
-          <h2>actualización de informacion</h2>
-          <p>disponemos de funciones tales como editar los involucrados en el proceso para la acoplacion del mismo </p>
+          <h2>actualización de información</h2>
+          <p>disponemos de funciones tales como editar los involucrados en el proceso para la acoplacion del mismo. </p>
        
        </div>
         <div class="col-md-4">
           <h2>busqueda</h2>
-          <p>proporcionamos la implementacion de buscadores para que puedas encontrar a tu ausado de una manera facil y optima</p>
+          <p>proporcionamos la implementacion de buscadores para que puedas encontrar a tu acusado de una manera facil y óptima.</p>
        
         </div>
       </div>

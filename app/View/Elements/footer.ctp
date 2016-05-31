@@ -31,7 +31,7 @@
 				<p>Una apuesta diferente al panorama formativo de programas convencionales como excell y otras plataformas en donde la informacion esta desordenada y no tiene ninguna relacion. </p>
 			</div>
 			<div class="col-xs-12 col-sm-7 col-md-6 col-md-offset-1">
-				<h3>TE GUSTA? CORRE LA VOZ</h3>
+				<h3>¿TE GUSTA? CORRE LA VOZ</h3>
 				<p>Si te gusta esta filosofía de almacenamiento de la informacion o has utilizado nuestra pagina y te hemos convencido, ayúdanos a promocionarlos por Internet para que otros puedan disfrutar de ellos:</p>
 				<!-- Insertar addthis -->
 			</div>

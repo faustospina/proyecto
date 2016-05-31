@@ -26,11 +26,11 @@
 	<ul class="dropdown-menu" role="menu">
 
 		<li><?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $this->Form->value('Fiscal.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('Fiscal.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('Lista de Fiscales'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('Lista de Audiencias'), array('controller' => 'audiencias', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nueva Audiencia'), array('controller' => 'audiencias', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Lista de Procesos'), array('controller' => 'procesos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nuevo Proceso'), array('controller' => 'procesos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de fiscales'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('Lista de audiencias'), array('controller' => 'audiencias', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nueva audiencia'), array('controller' => 'audiencias', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de procesos'), array('controller' => 'procesos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo proceso'), array('controller' => 'procesos', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
 </div>

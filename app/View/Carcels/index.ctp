@@ -1,7 +1,7 @@
 
 
 	<div class="page-header">
-	<h2><?php echo __('Carcels'); ?></h2>
+	<h2><?php echo __('Carceles'); ?></h2>
 	</div>
 
 	<div class="col-md-12">
@@ -12,10 +12,10 @@
 			
 			<th><?php echo $this->Paginator->sort('fecha de cracion'); ?></th>
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
-			<th><?php echo $this->Paginator->sort('numeroPatios'); ?></th>
-			<th><?php echo $this->Paginator->sort('numeroCelda'); ?></th>
-			<th><?php echo $this->Paginator->sort('modified'); ?></th>
-			<th><?php echo $this->Paginator->sort('fechaVisita'); ?></th>
+			<th><?php echo $this->Paginator->sort('numero de patios'); ?></th>
+			<th><?php echo $this->Paginator->sort('numero de celda'); ?></th>
+			<th><?php echo $this->Paginator->sort('fecha de modificación'); ?></th>
+			<th><?php echo $this->Paginator->sort('fecha de visita'); ?></th>
 			<th><?php echo $this->Paginator->sort('ciudad_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('audiencia_id'); ?></th>
 			<th class="actions"><?php echo __('Opciones'); ?></th>
@@ -52,7 +52,7 @@
 		<p>
 		<?php
 		echo $this->Paginator->counter(array(
-		'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+		'format'=> __('página {:page} de {:pages}, {:current} elémentos de {:count} en total, inicia en {:start}, termina en {:end}')
 		));
 		?>	</p>
 		<ul class="pagination">

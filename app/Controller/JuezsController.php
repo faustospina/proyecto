@@ -50,7 +50,7 @@ class JuezsController extends AppController {
  */
 	public function view($id = null) {
 		if (!$this->Juez->exists($id)) {
-			throw new NotFoundException(__('Invalid juez'));
+			throw new NotFoundException(__('este juez no existe'));
 		}
 		$options = array('conditions' => array('Juez.' . $this->Juez->primaryKey => $id));
 		$this->set('juez', $this->Juez->find('first', $options));
@@ -65,10 +65,10 @@ class JuezsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Juez->create();
 			if ($this->Juez->save($this->request->data)) {
-				$this->Session->setFlash(__('The juez has been saved.', 'default', array('class' => 'alert alert-success')));
-				return $this->redirect(array('action' => 'index'));
+				$this->Session->setFlash('se ha agregado el fiscal satisfactoriamente', 'default', array('class' => 'alert alert-success'));
+				return $this->redirect(array('controller'=>'pages','action'=>'home'));
 			} else {
-				$this->Session->setFlash('The juez could not be saved. Please, try again.', array('class' => 'alert alert-danger'));
+				$this->Session->setFlash('no se ha podido guardar', 'default', array('class' => 'alert alert-danger'));
 			}
 		}
 		$audiencias = $this->Juez->Audiencia->find('list');
@@ -85,14 +85,14 @@ class JuezsController extends AppController {
  */
 	public function edit($id = null) {
 		if (!$this->Juez->exists($id)) {
-			throw new NotFoundException(__('Invalid juez'));
+			throw new NotFoundException(__('el juez no existe'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Juez->save($this->request->data)) {
-				$this->Session->setFlash(__('The juez has been saved.'));
+				$this->Session->setFlash(__('el juez ha sido guardado.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The juez could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('el juez no se guardo.inténtelo de nuevo.'));
 			}
 		} else {
 			$options = array('conditions' => array('Juez.' . $this->Juez->primaryKey => $id));
@@ -113,13 +113,13 @@ class JuezsController extends AppController {
 	public function delete($id = null) {
 		$this->Juez->id = $id;
 		if (!$this->Juez->exists()) {
-			throw new NotFoundException(__('Invalid juez'));
+			throw new NotFoundException(__('juez invalido '));
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->Juez->delete()) {
-			$this->Session->setFlash(__('The juez has been deleted.'));
+			$this->Session->setFlash(__('el juez ha sido eliminado.'));
 		} else {
-			$this->Session->setFlash(__('The juez could not be deleted. Please, try again.'));
+			$this->Session->setFlash(__('el juez no se guardo. inténtelo de nuevo.'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}

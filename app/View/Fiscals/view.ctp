@@ -12,7 +12,7 @@
 		<th><?php echo __('Id'); ?></th>
 		<th><?php echo __('Nombre'); ?></th>
 		<th><?php echo __('Apellidos'); ?></th>
-		<th><?php echo __('CodigoRepresentativo'); ?></th>
+		<th><?php echo __('Codigo Representativo'); ?></th>
 		<th><?php echo __('Audiencia'); ?></th>
 	</tr>
 	</thead>
@@ -36,14 +36,14 @@
 	<?php echo __('Opciones'); ?><span class="caret"></span>
 	</button>
 	<ul class="dropdown-menu" role="menu">
-		<li><?php echo $this->Html->link(__('Editar Fiscal'), array('action' => 'edit', $fiscal['Fiscal']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Eliminar Fiscal'), array('action' => 'delete', $fiscal['Fiscal']['id']), array(), __('Are you sure you want to delete # %s?', $fiscal['Fiscal']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('Lista de Fiscales'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nuevo Fiscal'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Lista de Audiencias'), array('controller' => 'audiencias', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nueva Audiencia'), array('controller' => 'audiencias', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Lista de Procesos'), array('controller' => 'procesos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nuevo Proceso'), array('controller' => 'procesos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Editar fiscal'), array('action' => 'edit', $fiscal['Fiscal']['id'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Eliminar fiscal'), array('action' => 'delete', $fiscal['Fiscal']['id']), array(), __('Are you sure you want to delete # %s?', $fiscal['Fiscal']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de fiscales'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo fiscal'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de audiencias'), array('controller' => 'audiencias', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nueva audiencia'), array('controller' => 'audiencias', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de procesos'), array('controller' => 'procesos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo proceso'), array('controller' => 'procesos', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
 </div>
@@ -55,11 +55,11 @@
 	<table class="table table-striped">
 	<tr>
 		<th><?php echo __('Id'); ?></th>
-		<th><?php echo __('NombreDelito'); ?></th>
-		<th><?php echo __('NombreVariacionDelito'); ?></th>
+		<th><?php echo __('Nombre del delito'); ?></th>
+		<th><?php echo __('Nombre Variacion  Delito'); ?></th>
 		<th><?php echo __('Descripcion'); ?></th>
-		<th><?php echo __('NumeroRadicado'); ?></th>
-		<th><?php echo __('NumeroProceso'); ?></th>
+		<th><?php echo __('Numero del Radicado'); ?></th>
+		<th><?php echo __('Numero del Proceso'); ?></th>
 		<th><?php echo __('Estado'); ?></th>
 		<th><?php echo __('Acusado Id'); ?></th>
 		<th class="actions"><?php echo __('Actions'); ?></th>
