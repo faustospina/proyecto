@@ -31,7 +31,15 @@ class AcusadosControllerTest extends ControllerTestCase {
  * @return void
  */
 	public function testIndex() {
-		$this->markTestIncomplete('testIndex not implemented.');
+	
+		$this->Acusado->recursive = 0;
+		$this->paginate['Acusado']['limit'] = 2;
+		$this->paginate['Acusado']['order'] = array('1' => 'asc');
+		$this->set('acusados', $this->paginate());
+		echo $this->unit->run($this, acusado, 'Insert Test');
+		$this->assertTrue(true);
+		
+		
 	}
 
 /**
@@ -40,6 +48,14 @@ class AcusadosControllerTest extends ControllerTestCase {
  * @return void
  */
 	public function testView() {
+		
+		if (!$this->Acusado->exists($id)) {
+			throw new NotFoundException(__('este acusado es invalido'));
+		}
+		$options = array('conditions' => array('Acusado.' . $this->Acusado->primaryKey => $id));
+		$this->set('acusado', $this->Acusado->find('first', $options));
+		
+		
 		$this->markTestIncomplete('testView not implemented.');
 	}
 
