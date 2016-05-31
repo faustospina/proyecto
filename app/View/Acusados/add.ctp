@@ -14,7 +14,7 @@
 		echo $this->Form->input('direccion',array('class' => 'form-control', 'label' => 'Direccion'));
 		echo $this->Form->input('ocupacion',array('class' => 'form-control', 'label' => 'Ocupacion'));
 		echo $this->Form->input('culpabilidad');
-		echo $this->Form->input('capacidad de Pago');
+		echo $this->Form->input('capacidadPago');
 		echo $this->Form->input('sentencia',array('class' => 'form-control', 'label' => 'Sentencia'));
 		echo $this->Form->input('foto', array('type' => 'file', 'label' => 'Foto', 'id' => 'foto', 'class' => 'file', 'data-show-upload' => 'false', 'data-show-caption' => 'true'));
 		echo $this->Form->input('foto_dir', array('type'=>'hidden'));

@@ -8,7 +8,7 @@
 		echo $this->Form->input('nombre', array('class' => 'form-control', 'label' => 'Nombre'));
 		echo $this->Form->input('numeroPatios', array('class' => 'form-control', 'label' => 'Numero de patios'));
 		echo $this->Form->input('numeroCelda', array('class' => 'form-control', 'label' => 'Numero de celda'));
-		echo $this->Form->input('fecha de visita');
+		echo $this->Form->input('fechaVisita');
 		echo $this->Form->input('ciudad_id');
 		echo $this->Form->input('audiencia_id');
 	?>

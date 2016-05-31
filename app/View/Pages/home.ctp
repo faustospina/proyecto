@@ -13,10 +13,7 @@
        	<b>PASO 3</b>
        	<p>Vamos a la parte superior en donde dice <b>AGREGAR INVOLUCRADOS </b> y en tercera instancia agregamos a los jueces y los fiscales que se van a ver involucrados en el proceso de dicho acusado.</p>
        	 <b>PASO 4</b>
-       	<p>Vamos a la parte superior en donde dice <b>AGREGAR INVOLUCRADOS </b> y en cuarta instanciaagregamos a los acusados que se van a ver involucrados en el proceso y de ahí en adelante la plataforma lo guiara en el proceso.</p>
+       	<p>Vamos a la parte superior en donde dice <b>AGREGAR INVOLUCRADOS </b> y en cuarta instancia agregamos a los acusados que se van a ver involucrados y a continuacion el proceso.</p>
        	
-
-
-       
       </div>
 </div>
