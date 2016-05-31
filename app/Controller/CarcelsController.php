@@ -60,10 +60,10 @@ class CarcelsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Carcel->create();
 			if ($this->Carcel->save($this->request->data)) {
-				$this->Session->setFlash(__('la carcel ha sido guadada.'));
+				$this->Session->setFlash('se ha guardado con exito el nombre de la carcel', 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('controller'=>'pages','action'=>'home'));
 			} else {
-				$this->Session->setFlash(__('no se pudo guardar la carcel. inténtelo de nuevo.'));
+				$this->Session->setFlash('no se pudo guardar el nombre de la carcel', 'default', array('class' => 'alert alert-danger'));
 			}
 		}
 		$ciudads = $this->Carcel->Ciudad->find('list');
@@ -84,10 +84,10 @@ class CarcelsController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Carcel->save($this->request->data)) {
-				$this->Session->setFlash(__('carcel se ha guardado.'));
+				$this->Session->setFlash('se pudo editar la carcel con exito', 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('no se guardo la carcel. inténtelo de nuevo.'));
+				$this->Session->setFlash('no se pudo editar la carcel', 'default', array('class' => 'alert alert-danger'));
 			}
 		} else {
 			$options = array('conditions' => array('Carcel.' . $this->Carcel->primaryKey => $id));
@@ -112,9 +112,9 @@ class CarcelsController extends AppController {
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->Carcel->delete()) {
-			$this->Session->setFlash(__('la carcel ha sido eliminada.'));
+			$this->Session->setFlash('se pudo eliminar la carcel con exito', 'default', array('class' => 'alert alert-success'));
 		} else {
-			$this->Session->setFlash(__('no se pudo eliminar la carcel. inténtelo de nuevo.'));
+			$this->Session->setFlash('no se pudo eliminar la carcel', 'default', array('class' => 'alert alert-danger'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}

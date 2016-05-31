@@ -60,10 +60,10 @@ class ProcesosController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Proceso->create();
 			if ($this->Proceso->save($this->request->data)) {
-				$this->Session->setFlash('se ha agregado el proceso satisfactoriamente', 'default', array('class' => 'alert alert-success'));
+				$this->Session->setFlash('se ha registrado el proceso con exito', 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('controller'=>'pages','action'=>'home'));
 			} else {
-				$this->Session->setFlash('no se ha podido guardar', 'default', array('class' => 'alert alert-danger'));
+				$this->Session->setFlash('no se ha podido guardar el proceso con exito', 'default', array('class' => 'alert alert-danger'));
 			}
 		}
 		$acusados = $this->Proceso->Acusado->find('list');
@@ -85,10 +85,10 @@ class ProcesosController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Proceso->save($this->request->data)) {
-				$this->Session->setFlash(__('el proceso ha sido guardado.'));
+				$this->Session->setFlash('se pudo editar el proceso con exito', 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('el proceso no ha sido guardado. inténtelo de nuevo.'));
+				$this->Session->setFlash('no se pudo editar el proceso con exito', 'default', array('class' => 'alert alert-danger'));
 			}
 		} else {
 			$options = array('conditions' => array('Proceso.' . $this->Proceso->primaryKey => $id));
@@ -114,9 +114,9 @@ class ProcesosController extends AppController {
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->Proceso->delete()) {
-			$this->Session->setFlash(__('el proceso ha sido eliminado.'));
+			$this->Session->setFlash('se pudo eliminar el proceso con exito', 'default', array('class' => 'alert alert-success'));
 		} else {
-			$this->Session->setFlash(__('el proceso no ha sido eliminado.inténtelo de nuevo.'));
+			$this->Session->setFlash('no se pudo eliminar el proceso con exito', 'default', array('class' => 'alert alert-danger'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}

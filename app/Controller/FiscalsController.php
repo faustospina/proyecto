@@ -61,10 +61,10 @@ class FiscalsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Fiscal->create();
 			if ($this->Fiscal->save($this->request->data)) {
-				$this->Session->setFlash('se ha agregado el fiscal satisfactoriamente', 'default', array('class' => 'alert alert-success'));
+				$this->Session->setFlash('se ha agregado el fiscal correctamente', 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('controller'=>'pages','action'=>'home'));
 			} else {
-				$this->Session->setFlash('no se ha podido guardar', 'default', array('class' => 'alert alert-danger'));
+				$this->Session->setFlash('no se ha podido guardar el fiscal', 'default', array('class' => 'alert alert-danger'));
 			}
 		}
 		$audiencias = $this->Fiscal->Audiencia->find('list');
@@ -85,10 +85,10 @@ class FiscalsController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Fiscal->save($this->request->data)) {
-				$this->Session->setFlash(__('el fiscal ha sido editado.'));
+				$this->Session->setFlash('se pudo editar el fiscal con exito', 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('fiscal no se guardo.inténtelo de nuevo.'));
+				$this->Session->setFlash('no se pudo editar el fiscal con exito', 'default', array('class' => 'alert alert-danger'));
 			}
 		} else {
 			$options = array('conditions' => array('Fiscal.' . $this->Fiscal->primaryKey => $id));
@@ -113,9 +113,9 @@ class FiscalsController extends AppController {
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->Fiscal->delete()) {
-			$this->Session->setFlash(__('The fiscal has been deleted.'));
+			$this->Session->setFlash('se pudo eliminar el fiscal con exito', 'default', array('class' => 'alert alert-success'));
 		} else {
-			$this->Session->setFlash(__('The fiscal could not be deleted. Please, try again.'));
+			$this->Session->setFlash('no se pudo eliminar el fiscal', 'default', array('class' => 'alert alert-danger'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}

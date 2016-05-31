@@ -60,10 +60,10 @@ class CiudadsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Ciudad->create();
 			if ($this->Ciudad->save($this->request->data)) {
-				$this->Session->setFlash(__('la ciudad fue guardada.'));
+				$this->Session->setFlash('se guardo con exito la ciudad', 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('controller'=>'pages','action'=>'home'));
 			} else {
-				$this->Session->setFlash('no se pudo completar el registro', 'default', array('class' => 'alert alert-danger'));
+				$this->Session->setFlash('no se pudo guardar la ciudad', 'default', array('class' => 'alert alert-danger'));
 			}
 		}
 	}
@@ -81,10 +81,10 @@ class CiudadsController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Ciudad->save($this->request->data)) {
-				$this->Session->setFlash(__('la ciudad ha sido guardada.'));
+				$this->Session->setFlash('se pudo editar la ciudad con exito', 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('la ciudad no se guardo.inténtelo de nuevo.'));
+				$this->Session->setFlash('no se pudo editar la ciudad con exito', 'default', array('class' => 'alert alert-danger'));
 			}
 		} else {
 			$options = array('conditions' => array('Ciudad.' . $this->Ciudad->primaryKey => $id));
@@ -106,9 +106,9 @@ class CiudadsController extends AppController {
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->Ciudad->delete()) {
-			$this->Session->setFlash(__('la ciudad ha sido eliminada.'));
+			$this->Session->setFlash('se pudo eliminar la ciudad con exito', 'default', array('class' => 'alert alert-success'));
 		} else {
-			$this->Session->setFlash(__('a ciudad no se elimino.inténtelo de nuevo.'));
+			$this->Session->setFlash('no se pudo eliminar la ciudad con exito', 'default', array('class' => 'alert alert-danger'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}

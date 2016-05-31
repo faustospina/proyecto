@@ -116,9 +116,9 @@ class AcusadosController extends AppController {
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->Acusado->delete()) {
-			$this->Session->setFlash('se pudo eliminar', 'default', array('class' => 'alert alert-success'));
+			$this->Session->setFlash('se elimino con exito', 'default', array('class' => 'alert alert-success'));
 		} else {
-			$this->Session->setFlash('no se pudo eliminar', 'default', array('class' => 'alert alert-success'));
+			$this->Session->setFlash('no error al eliminar', 'default', array('class' => 'alert alert-danger'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}

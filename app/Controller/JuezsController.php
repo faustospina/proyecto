@@ -65,10 +65,10 @@ class JuezsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Juez->create();
 			if ($this->Juez->save($this->request->data)) {
-				$this->Session->setFlash('se ha agregado el fiscal satisfactoriamente', 'default', array('class' => 'alert alert-success'));
+				$this->Session->setFlash('se ha agregado el juez con exito', 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('controller'=>'pages','action'=>'home'));
 			} else {
-				$this->Session->setFlash('no se ha podido guardar', 'default', array('class' => 'alert alert-danger'));
+				$this->Session->setFlash('no se ha podido guardar el juez', 'default', array('class' => 'alert alert-danger'));
 			}
 		}
 		$audiencias = $this->Juez->Audiencia->find('list');
@@ -89,10 +89,10 @@ class JuezsController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Juez->save($this->request->data)) {
-				$this->Session->setFlash(__('el juez ha sido guardado.'));
+				$this->Session->setFlash('se pudo editar el juez con exito', 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('el juez no se guardo.inténtelo de nuevo.'));
+				$this->Session->setFlash('no se pudo editar el juez con exito', 'default', array('class' => 'alert alert-danger'));
 			}
 		} else {
 			$options = array('conditions' => array('Juez.' . $this->Juez->primaryKey => $id));
@@ -117,9 +117,9 @@ class JuezsController extends AppController {
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->Juez->delete()) {
-			$this->Session->setFlash(__('el juez ha sido eliminado.'));
+			$this->Session->setFlash('se pudo eliminar el juez con exito', 'default', array('class' => 'alert alert-success'));
 		} else {
-			$this->Session->setFlash(__('el juez no se guardo. inténtelo de nuevo.'));
+			$this->Session->setFlash('no se pudo eliminar el juez con exito', 'default', array('class' => 'alert alert-danger'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}

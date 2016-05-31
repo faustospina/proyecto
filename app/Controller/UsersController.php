@@ -102,7 +102,7 @@ public function logout()
 			$this->User->create();
 			$this->request->data['User']['roll'] = 'user';
 			if ($this->User->save($this->request->data)) {
-				$this->Session->setFlash('se ha agregado el susuario satisfactoriamente', 'default', array('class' => 'alert alert-success'));
+				$this->Session->setFlash('se ha agregado el usuario satisfactoriamente', 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('controller'=>'pages','action'=>'home'));
 			} else {
 				$this->Session->setFlash('no se ha podido guardar', 'default', array('class' => 'alert alert-danger'));
@@ -123,10 +123,10 @@ public function logout()
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->User->save($this->request->data)) {
-				$this->Session->setFlash(__('el user ha sido guardado.'));
+				$this->Session->setFlash(__('el usuario ha sido guardado.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('el user no ha sido guardado. inténtelo de nuevo.'));
+				$this->Session->setFlash(__('el usuario no ha sido guardado. inténtelo de nuevo.'));
 			}
 		} else {
 			$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
@@ -148,9 +148,9 @@ public function logout()
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->User->delete()) {
-			$this->Session->setFlash(__('el user ha sido eliminado.'));
+			$this->Session->setFlash(__('el usuario ha sido eliminado.'));
 		} else {
-			$this->Session->setFlash(__('el user no ha sido eliminado. inténtelo de nuevo.'));
+			$this->Session->setFlash(__('el usuario no ha sido eliminado. inténtelo de nuevo.'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}

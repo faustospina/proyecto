@@ -60,7 +60,7 @@ class AudienciasController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Audiencia->create();
 			if ($this->Audiencia->save($this->request->data)) {
-				$this->Session->setFlash(__(' audiencia guardada.'));
+				$this->Session->setFlash('se ha guardado con exito los parametros de la audiencia', 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('controller'=>'pages','action'=>'home'));
 			} else {
 				$this->Session->setFlash('no se ha podido guardar', 'default', array('class' => 'alert alert-danger'));
@@ -81,7 +81,7 @@ class AudienciasController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Audiencia->save($this->request->data)) {
-				$this->Session->setFlash('la audiencia ha sido editada', 'default', array('class' => 'alert alert-success'));
+				$this->Session->setFlash('la audiencia se ha editado con exito', 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash('la audiencia no se ha podido editar.', 'default', array('class' =>'alert alert-danger' ));
@@ -106,9 +106,9 @@ class AudienciasController extends AppController {
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->Audiencia->delete()) {
-			$this->Session->setFlash(__('la audiencia fue eliminada.'));
+			$this->Session->setFlash('se ha eliminado la audiencia con exito', 'default', array('class' => 'alert alert-success'));
 		} else {
-			$this->Session->setFlash(__('no se pudo eliminar.inténtelo de nuevo.'));
+			$this->Session->setFlash('no se pudo eliminar la audiencia', 'default', array('class' =>'alert alert-danger' ));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}
